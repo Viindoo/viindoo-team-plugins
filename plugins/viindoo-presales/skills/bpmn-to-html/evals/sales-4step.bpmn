@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions
+    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+    id="Definitions_1"
+    targetNamespace="http://bpmn.io/schema/bpmn"
+    exporter="bpmn-to-html eval"
+    exporterVersion="0.1">
+
+  <bpmn:collaboration id="Collaboration_1">
+    <bpmn:participant id="Participant_1" name="Quy trình bán hàng — mẫu smoke test" processRef="Process_1" />
+  </bpmn:collaboration>
+
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_Customer" name="Khách hàng">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SubmitOrder</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_SalesStaff" name="Nhân viên kinh doanh">
+        <bpmn:flowNodeRef>Task_ApproveOrder</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="StartEvent_1" name="Khách có nhu cầu" />
+    <bpmn:userTask id="Task_SubmitOrder" name="Gửi yêu cầu báo giá" />
+    <bpmn:userTask id="Task_ApproveOrder" name="Duyệt &amp; phát hành báo giá" />
+    <bpmn:endEvent id="EndEvent_1" name="Báo giá đã gửi" />
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_SubmitOrder" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_SubmitOrder" targetRef="Task_ApproveOrder" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_ApproveOrder" targetRef="EndEvent_1" />
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
+
+      <bpmndi:BPMNShape id="Participant_1_di" bpmnElement="Participant_1" isHorizontal="true">
+        <dc:Bounds x="100" y="100" width="620" height="300" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Lane_Customer_di" bpmnElement="Lane_Customer" isHorizontal="true">
+        <dc:Bounds x="130" y="100" width="590" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_SalesStaff_di" bpmnElement="Lane_SalesStaff" isHorizontal="true">
+        <dc:Bounds x="130" y="250" width="590" height="150" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="182" y="157" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="160" y="200" width="80" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_SubmitOrder_di" bpmnElement="Task_SubmitOrder">
+        <dc:Bounds x="300" y="135" width="100" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_ApproveOrder_di" bpmnElement="Task_ApproveOrder">
+        <dc:Bounds x="450" y="285" width="100" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1">
+        <dc:Bounds x="632" y="307" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="615" y="350" width="72" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="218" y="175" />
+        <di:waypoint x="300" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="400" y="175" />
+        <di:waypoint x="425" y="175" />
+        <di:waypoint x="425" y="325" />
+        <di:waypoint x="450" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="550" y="325" />
+        <di:waypoint x="632" y="325" />
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

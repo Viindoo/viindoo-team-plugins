@@ -1,0 +1,24 @@
+{
+  "slug": "example",
+  "create": {"blog_id": 12, "website_id": 1, "author_id": 541},
+  "meta": {
+    "name": ["What does digitalization help a business \"see\" in order to do Kaizen?", "Số hóa giúp doanh nghiệp \"nhìn thấy\" gì để Kaizen?"],
+    "subtitle": ["Article 2 of the \"From Data to Kaizen\" series.", "Bài 2 chuỗi \"Từ dữ liệu đến Kaizen\"."],
+    "website_meta_title": ["What Digitalization Helps You See for Kaizen | Viindoo", "Số hóa giúp nhìn thấy gì để Kaizen | Viindoo"],
+    "website_meta_description": ["See how digitalization makes the whole flow visible, from orders to delivery, so a business knows exactly where Kaizen should start.", "Số hóa giúp nhìn thấy toàn bộ dòng chảy từ đơn hàng đến giao hàng, để doanh nghiệp biết chính xác nên bắt đầu Kaizen từ đâu."],
+    "website_meta_keywords": ["digitalization, Kaizen, flow, Viindoo", "số hóa, Kaizen, dòng chảy, Viindoo"],
+    "seo_name": ["what-digitalization-helps-you-see-for-kaizen", "so-hoa-giup-nhin-thay-gi-de-kaizen"]
+  },
+  "blocks": [
+    {"p": ["Kaizen starts with <strong>seeing the flow</strong>.", "Kaizen bắt đầu từ việc <strong>nhìn thấy dòng chảy</strong>."]},
+    {"figure": {"src": "/web/image/6873095/MPS%20Viindoo%20.png", "src_vi": "/web/image/6873115/MPS%20viindoo%20.png",
+                "alt": ["Master Production Schedule in Viindoo", "Kế hoạch sản xuất tổng thể (MPS) trên Viindoo"],
+                "caption": ["Demand, replenishment and forecast stock by period.", "Nhu cầu, tái cung ứng và tồn kho dự báo theo từng kỳ."]}},
+    {"h2": ["What is a flow?", "Dòng chảy là gì?"]},
+    {"ul": [["Orders", "Đơn hàng"], ["Materials", "Vật tư"]]},
+    {"table": {"rows": [[["Stage", "Công đoạn"], ["Days", "Số ngày"]], [["Waiting", "Chờ"], ["14", "14"]]], "right_cols": [1]}},
+    {"quote": ["See first, then measure.", "Nhìn thấy trước, rồi mới đo."]}
+  ],
+  "related": [{"url": "/blog/digital-transformation-12/kaizen-and-digitalization-2563", "en": "Kaizen and Digitalization: How They Connect in Business Improvement", "vi": "Kaizen và số hóa: Mối liên hệ trong cải tiến doanh nghiệp"}],
+  "cta": true
+}

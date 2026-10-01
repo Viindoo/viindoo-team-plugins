@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Eval fixture for bpmn-validate.
+
+  Intentional defects:
+   * Flow_X.targetRef references a node that does not exist  → ERROR (check 2).
+   * Task_Merge has 2 incoming sequence flows but is not a   → WARNING (check 10).
+     gateway → split-without-join anti-pattern.
+
+  Expected output: exit code 2, errors=[1 dangling ref], warnings=[1 multi-incoming].
+-->
+<bpmn:definitions
+    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+    id="Definitions_X"
+    targetNamespace="http://bpmn.io/schema/bpmn">
+
+  <bpmn:collaboration id="Collaboration_X">
+    <bpmn:participant id="Participant_X" name="Broken sample" processRef="Process_X" />
+  </bpmn:collaboration>
+
+  <bpmn:process id="Process_X" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_X">
+      <bpmn:lane id="Lane_Only" name="Only lane">
+        <bpmn:flowNodeRef>StartEvent_X</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_A</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_B</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Merge</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_X</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="StartEvent_X" name="Start" />
+    <bpmn:exclusiveGateway id="Gateway_Split" name="Cond?" />
+    <bpmn:userTask id="Task_A" name="Branch A" />
+    <bpmn:userTask id="Task_B" name="Branch B" />
+    <bpmn:userTask id="Task_Merge" name="Continue (BAD: 2 incoming)" />
+    <bpmn:endEvent id="EndEvent_X" name="End" />
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_X" targetRef="Gateway_Split" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Gateway_Split" targetRef="Task_A" name="A" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Gateway_Split" targetRef="Task_B" name="B" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_A" targetRef="Task_Merge" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_B" targetRef="Task_Merge" />
+    <bpmn:sequenceFlow id="Flow_X" sourceRef="Task_Merge" targetRef="Ghost_NotDefined" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Merge" targetRef="EndEvent_X" />
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_X">
+    <bpmndi:BPMNPlane id="BPMNPlane_X" bpmnElement="Collaboration_X">
+      <bpmndi:BPMNShape id="Participant_X_di" bpmnElement="Participant_X" isHorizontal="true">
+        <dc:Bounds x="100" y="100" width="900" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Only_di" bpmnElement="Lane_Only" isHorizontal="true">
+        <dc:Bounds x="130" y="100" width="870" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_X_di" bpmnElement="StartEvent_X">
+        <dc:Bounds x="182" y="157" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Split_di" bpmnElement="Gateway_Split" isMarkerVisible="true">
+        <dc:Bounds x="300" y="150" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_A_di" bpmnElement="Task_A">
+        <dc:Bounds x="450" y="120" width="100" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_B_di" bpmnElement="Task_B">
+        <dc:Bounds x="450" y="190" width="100" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Merge_di" bpmnElement="Task_Merge">
+        <dc:Bounds x="650" y="135" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_X_di" bpmnElement="EndEvent_X">
+        <dc:Bounds x="850" y="157" width="36" height="36" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="218" y="175" /><di:waypoint x="300" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="350" y="175" /><di:waypoint x="450" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="350" y="175" /><di:waypoint x="450" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="550" y="150" /><di:waypoint x="650" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="550" y="220" /><di:waypoint x="650" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_X_di" bpmnElement="Flow_X">
+        <di:waypoint x="750" y="175" /><di:waypoint x="850" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="750" y="175" /><di:waypoint x="850" y="175" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

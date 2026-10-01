@@ -1,0 +1,7 @@
+{
+  "name": "viindoo-marketing",
+  "version": "1.0.0",
+  "description": "Marketing Viindoo: skill vi (sinh tiếng Việt qua Gemini), viindoo-blog-publish (đăng blog song ngữ viindoo.com dạng nháp), agent vietnamese-writer.",
+  "author": { "name": "Nguyễn Thị Liên" },
+  "keywords": ["viindoo", "marketing", "blog", "vietnamese", "seo"]
+}

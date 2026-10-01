@@ -1,0 +1,130 @@
+# Viindoo Brand Specification
+# Source: https://viindoo.com/vi/page/brand-assets
+# Last verified: 2026-05-02
+
+company:
+  name_vi: "CÔNG TY CỔ PHẦN CÔNG NGHỆ VIINDOO"
+  name_en: "VIINDOO TECHNOLOGY JOINT STOCK COMPANY"
+  short_name: "Viindoo"
+  slogan_en: "One solution for every need"
+  website: "https://viindoo.com"
+
+logos:
+  color_png: "logos/viindoo-logo-color.png"           # 2769x1241 hi-res
+  inverted_png: "logos/viindoo-logo-inverted.png"     # for dark backgrounds
+  inverted_svg: "logos/viindoo-logo-inverted.svg"
+
+colors:
+  primary:
+    hex: "#00BBCE"
+    name: "Viindoo Cyan"
+    use: "Headings, accent, primary buttons, brand identity"
+  secondary:
+    hex: "#7F4282"
+    name: "Viindoo Purple"
+    use: "Secondary accent, sub-headings"
+  gray:
+    hex: "#8F8F8F"
+    name: "Supporting Gray"
+    use: "Borders, dividers, footnotes"
+  background:
+    off_white: "#F2F2F2"
+    white: "#FFFFFF"
+  text:
+    heading: "#21272B"
+    body: "#282F33"
+    secondary: "#6B6D70"
+  status:
+    success: "#00B365"
+    warning: "#C99700"
+    info: "#0099E6"
+
+fonts:
+  # Marketing materials use Montserrat + Roboto.
+  # Administrative documents (QTUD, contracts, government-style) use Times New Roman.
+  marketing:
+    heading: "Montserrat"
+    heading_weight: "Bold"
+    body: "Roboto"
+    body_weight: "Regular"
+  administrative:
+    # Bắt buộc cho QTUD theo Regulation 30/2020/NĐ-CP
+    family: "Times New Roman"
+    heading_size_pt: 14
+    heading_weight: "Bold"
+    heading_case: "ALL CAPS"
+    body_size_pt: 13
+    body_weight: "Regular"
+    line_spacing: 1.3
+
+bpmn_palette:
+  # Rút từ file Nasilkmex Dệt Lụa BPMN drawio thật (47 pages, signed QTUD reference)
+  shapes:
+    task: "shape=mxgraph.bpmn.task"
+    gateway: "shape=mxgraph.bpmn.gateway2"
+    event: "shape=mxgraph.bpmn.event"
+    data_object: "shape=mxgraph.bpmn.data"
+  swimlane:
+    style: "swimlane;html=1;startSize=60;horizontal=0;fontSize=18;verticalAlign=middle"
+  pool:
+    style: "swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=0;startSize=60;horizontalStack=0;fontSize=18;verticalAlign=middle"
+  activity_colors:
+    user_task:
+      fill: "#dae8fc"
+      stroke: "#6c8ebf"
+      desc: "Activity người dùng làm trên Viindoo"
+    service_task:
+      fill: "#d5e8d4"
+      stroke: "#82b366"
+      desc: "Activity hệ thống tự làm (cron, automation)"
+    manual_task:
+      fill: "#fff2cc"
+      stroke: "#d6b656"
+      desc: "Activity ngoài hệ thống (gặp KH, ký bản cứng, dùng Excel/Zalo)"
+    changed_task:
+      fill: "#ffe6cc"
+      stroke: "#d79b00"
+      desc: "Activity thay đổi vs As-Is"
+    new_task:
+      fill: "#d5e8d4"
+      stroke: "#82b366"
+      desc: "Activity mới hoàn toàn trong To-Be"
+    removed_task:
+      fill: "#f5f5f5"
+      stroke: "#666666"
+      desc: "Activity bị loại bỏ trong To-Be (vẽ mờ + nét đứt)"
+    data_object:
+      fill: "#e1d5e7"
+      stroke: "#9673a6"
+    external_actor:
+      fill: "#d80073"
+      stroke: "#A50040"
+      desc: "Pool ngoài (KH, NCC, sàn TMĐT)"
+
+qtud_styling:
+  # Áp dụng khi compose_qtud.py sinh .docx
+  cover_logo_width_cm: 6
+  cover_title_color: "#21272B"
+  cover_subtitle_color: "#7F4282"
+  heading_1_color: "#00BBCE"
+  heading_1_size_pt: 16
+  heading_2_color: "#21272B"
+  heading_2_size_pt: 14
+  heading_3_color: "#7F4282"
+  heading_3_size_pt: 13
+  table_header_fill: "#00BBCE"
+  table_header_text_color: "#FFFFFF"
+  table_border_color: "#8F8F8F"
+  body_color: "#282F33"
+  margin_cm:
+    top: 2.5
+    bottom: 2.5
+    left: 3.0
+    right: 2.0
+  page_size: "A4"
+  footer_text: "Bản quyền © Viindoo {year}. Tài liệu này là một phần không thể tách rời của Hợp đồng Dịch vụ."
+
+regulatory:
+  # Tham chiếu pháp lý chuẩn Viindoo dùng
+  document_format_law: "Nghị định 30/2020/NĐ-CP về công tác văn thư"
+  vas_circular: "Thông tư 200/2014/TT-BTC, Thông tư 99/... (áp dụng từ 2026)"

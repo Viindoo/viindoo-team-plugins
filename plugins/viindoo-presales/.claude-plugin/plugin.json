@@ -1,0 +1,7 @@
+{
+  "name": "viindoo-presales",
+  "version": "1.0.0",
+  "description": "Presales Viindoo: spec-from-source, spec-to-bpmn, bpmn-validate, bpmn-to-drawio, bpmn-to-html, lệnh /bpmn-pipeline, agent bpmn-builder, bpmn-reviewer, viindoo-deliverable-reviewer, viindoo-source-explorer.",
+  "author": { "name": "Nguyễn Thị Liên" },
+  "keywords": ["viindoo", "presales", "bpmn", "qtud", "fit-gap"]
+}
