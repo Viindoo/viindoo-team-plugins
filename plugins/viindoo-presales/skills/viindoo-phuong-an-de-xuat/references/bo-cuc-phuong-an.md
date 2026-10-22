@@ -1,10 +1,10 @@
 # Bố cục phương án - chi tiết từng mục
 
-Theo mẫu JVC Eco v3. Giữ đúng thứ tự và cách đánh số; nội dung viết lại theo từng khách.
+Mẫu chuẩn hiện hành (bản Quang Thắng, 20/10/2026). Giữ đúng thứ tự và cách đánh số; nội dung viết lại theo từng khách. Các mẫu cũ hơn không dùng nữa.
 
 ## Tóm tắt điều hành
 
-- Ba đến bốn thẻ số, **chỉ số của Viindoo**: tổng đầu tư trả một lần, thuê bao trên người dùng, tiến độ dự kiến, số pháp nhân cùng chạy trên một hệ thống.
+- Ba đến bốn thẻ số, **chỉ số của Viindoo**: tổng dịch vụ trả một lần, thuê bao trên người dùng, tiến độ dự kiến, số gói Express.
 - Một khối gạch ý ngắn nói phạm vi gồm gì. Người quyết định đọc 30 giây phải biết cần quyết gì.
 
 ## 1. Bối cảnh và phạm vi
@@ -13,21 +13,37 @@ Gạch ý có nhãn: khách là ai, đang vướng gì, đợt này làm gì, kh
 
 ## 2. Mô tả nghiệp vụ trên hệ thống Viindoo
 
-Mục dài nhất, cũng là mục khách đọc kỹ nhất. Mỗi nhóm một khối, trong khối liệt kê từng nghiệp vụ kèm nhãn mức đáp ứng (Có sẵn - dùng ngay / Có sẵn - cấu hình / Có sẵn - tích hợp).
+Mục dài nhất, cũng là mục khách đọc kỹ nhất, và là mục sẽ đi thẳng vào phụ lục hợp đồng ở bước 5 - nên viết như một cam kết, không phải lời quảng cáo.
+
+Mỗi nhóm một khối `vdoc.nhom_nghiep_vu(tieu_de, cau_dan, muc, can_lam_ro)`:
+
+- **Câu dẫn** - một câu nói nhóm này giải quyết gì, viết cho người làm nghề đọc. Ví dụ: "Mỗi yêu cầu sản phẩm mới hình thành một hồ sơ có mã, tên và model riêng; hồ sơ này là chứng từ gốc cho mọi bước phía sau."
+- **Gạch ý** - mỗi ý là một việc hệ thống làm được, nói bằng ngôn ngữ nghiệp vụ, không nêu tên model.
+- **Khối Cần làm rõ** - điểm phải thống nhất ở giai đoạn Khảo sát. Để riêng ra, không trộn vào phần khẳng định.
 
 **Xếp theo dòng chảy đơn hàng của khách**, không theo mã BR:
 
-CRM - bán hàng - đề nghị và lệnh sản xuất, định mức - mua nguyên vật liệu - kho và cấp liệu - sản xuất và kiểm soát chất lượng - bảo trì - xuất kho và giao hàng - kế toán - nhân sự - lương.
+dữ liệu nền - CRM - bán hàng và báo giá - kế hoạch và ngày giao - hồ sơ kỹ thuật - điều hành xưởng - chất lượng - thuê ngoài gia công - mua hàng - kho vận - bảo trì - giao hàng - chấm công, nhân sự và lương - kế toán - giá thành - phân quyền.
 
-Trong mỗi nhóm cũng xếp theo thứ tự việc diễn ra. Ngành đã có bộ quy trình riêng thì nhóm theo bộ quy trình ngành và import thẳng tệp quy trình đó làm nguồn, không chép tay tên quy trình.
+Trong mỗi nhóm xếp theo thứ tự việc diễn ra. Ngành đã có bộ quy trình riêng thì nhóm theo bộ quy trình ngành và import thẳng tệp quy trình đó làm nguồn. Luôn có nhóm CRM dù khách chưa nêu; khách có sản xuất thì phải có bảo trì.
 
-Luôn có nhóm CRM với tính năng có sẵn, kể cả khi khách chưa nêu. Khách có sản xuất thì phải có nhóm bảo trì.
+Nếu có bảng đối chiếu từng yêu cầu với mức đáp ứng, đặt trong nhóm tương ứng, mỗi dòng kèm mã yêu cầu để truy ngược về danh mục BR.
 
 ## 3. Các yêu cầu cần phát triển ngoài phạm vi gói
 
-Danh sách "Tên hạng mục (BR-x): số tiền" và tổng tiền. **Không giờ, không ngày công, không đơn giá theo cấp.**
+Mở đầu bằng một đoạn nói vì sao chúng không nằm trong gói, rồi khối nguyên tắc bắt buộc (`vdoc.NGUYEN_TAC_PHAT_TRIEN`): mỗi hạng mục xây mở rộng trên phân hệ sẵn có nên vẫn thừa hưởng phân quyền, nhật ký, báo cáo và các bản nâng cấp; dữ liệu đi vào chứng từ gốc, không tạo luồng số liệu song song.
 
-Thêm một dòng: chi phí phát triển đã áp dụng AI hỗ trợ lập trình, kiểm thử, viết tài liệu.
+Mỗi hạng mục một khối `vdoc.khoi_phat_trien(...)`, **giá hiển thị ngay cạnh tên**:
+
+| Phần | Viết gì |
+|---|---|
+| Tóm tắt | một đoạn nói hạng mục này làm được gì cho khách |
+| Bài toán hiện nay | khách đang phải làm thủ công ra sao, sai ở đâu |
+| Hệ thống sẽ làm gì | kết quả quan sát được, không mô tả kỹ thuật |
+| Vì sao phải phát triển thêm | vì sao cấu hình không đủ - đây là chỗ chống câu hỏi "sao không có sẵn" |
+| Giới hạn phạm vi | cái gì **không** nằm trong hạng mục - chống phình việc lúc nghiệm thu |
+
+Không ghi giờ, ngày công, đơn giá theo cấp ở bất kỳ đâu trong mục này.
 
 ## 4. Cách tiếp cận
 
@@ -35,38 +51,32 @@ Thẻ gạch ý: làm theo gói nối tiếp nhau, chốt phạm vi từng gói 
 
 ## 5. Quy trình triển khai
 
-Các giai đoạn theo phương pháp luận triển khai của Viindoo. Giữ nguyên tên giai đoạn chuẩn, không tự đặt tên mới.
+Các giai đoạn theo phương pháp luận triển khai của Viindoo, dạng dải bước có số thứ tự. Giữ nguyên tên giai đoạn chuẩn, không tự đặt tên mới.
 
-## 6. Phân bổ giờ công theo giai đoạn
+## 6. Kế hoạch triển khai chi tiết
 
-Bảng: giai đoạn | giờ | phần việc chính. Ghi chú bắt buộc dưới bảng:
+Bảng tiến độ theo tuần: hạng mục | giờ | các cột tuần tô màu theo giai đoạn. Các gói **nối tiếp nhau** kiểu scrum, chỉ gối phần giám sát.
 
-- Giờ ở đây là **giờ công chuyên viên Viindoo**, không phải giờ lịch; nhiều chuyên viên làm song song thì cộng dồn.
-- Thời gian Công ty tự nhập liệu, tự đọc tài liệu không tính vào giờ gói.
-- Thời lượng từng hạng mục được thống nhất ở giai đoạn Khảo sát và Lập kế hoạch; tổng giờ gói cố định theo hợp đồng.
+Ghi chú bắt buộc dưới bảng:
 
-**Không cắt giờ khảo sát** vì đã có tài liệu phân tích làm sẵn - khảo sát thực địa với từng phòng ban là việc khác.
+- Giờ là **giờ công chuyên viên Viindoo**, không phải giờ lịch; nhiều chuyên viên song song thì cộng dồn.
+- Thời gian khách tự nhập liệu, tự đọc tài liệu không tính vào giờ gói.
+- Thời lượng từng hạng mục chốt ở giai đoạn Khảo sát và Lập kế hoạch; tổng giờ gói cố định theo hợp đồng.
 
-## 7. Kế hoạch triển khai chi tiết
+**Không cắt giờ khảo sát** vì đã có tài liệu phân tích làm sẵn.
 
-Theo tuần. Các gói **nối tiếp nhau** kiểu scrum, chỉ gối phần giám sát; không chạy song song hai gói. Mỗi tuần ghi phần việc chính và kết quả bàn giao.
+## 7. Báo giá
 
-## 8. Báo giá
+7.1 trả một lần, 7.2 trả định kỳ theo năm. Chi tiết cách trình bày và năm ghi chú bắt buộc: `bang-gia.md`.
 
-- **8.1 Dịch vụ trả một lần** - tách rõ: gói Viindoo Express (có ưu đãi nếu đủ điều kiện) và Dịch vụ phát triển (chỉ tổng tiền). Nâng cấp phiên bản nếu có.
-- **8.2 Dịch vụ trả định kỳ theo năm** - thuê bao, chỉ ghi đơn giá gói trên người dùng trên tháng.
-- **Chưa gồm** - luôn có dòng chi phí đi lại, ăn ở của chuyên viên Viindoo khi làm việc tại khách.
+## 8. Khuyến nghị
 
-Chi tiết cách trình bày: `bang-gia.md`.
-
-## 9. Khuyến nghị
-
-Gạch ý: nên bắt đầu từ đâu, cần Công ty chuẩn bị gì, rủi ro nào cần để ý.
+Thẻ gạch ý: nên bắt đầu từ đâu, cần khách chuẩn bị gì, rủi ro nào cần để ý.
 
 ## Mục cuối - Đề xuất giai đoạn sau (ngoài phạm vi báo giá)
 
-**Luôn là mục đánh số cuối cùng**, sau Báo giá và Khuyến nghị. Tiêu đề ghi rõ "(ngoài phạm vi báo giá)" kèm một khung nói rõ phần này không nằm trong tổng chi phí. Đặt ở giữa tài liệu là khách hiểu nhầm đã tính tiền.
+Nếu có, **luôn là mục đánh số cuối cùng**, sau Báo giá và Khuyến nghị, tiêu đề ghi rõ "(ngoài phạm vi báo giá)" kèm khung nói rõ phần này không nằm trong tổng chi phí. Đặt ở giữa tài liệu là khách hiểu nhầm đã tính tiền.
 
-## Khối chuyên gia
+## In ra PDF
 
-Nếu có, đặt cuối tài liệu: ảnh và một đoạn ngắn giới thiệu người phụ trách tư vấn. Dùng lại khối `.expert` trong CSS `phuong-an`.
+Các mục lớn bắt đầu trang mới (`style="break-before:page"`), đầu bảng lặp lại khi bảng tràn trang, khối phát triển và thẻ không bị cắt ngang. CSS trong `kit/css/phuong-an.css` đã lo sẵn; đừng bỏ phần `@media print`.

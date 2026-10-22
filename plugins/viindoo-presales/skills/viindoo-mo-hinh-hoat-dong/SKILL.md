@@ -9,6 +9,19 @@ Tài liệu đầu tiên gửi khách. Trả lời đúng một câu hỏi: **do
 
 Khách đọc để xác nhận "Viindoo hiểu đúng về chúng tôi chưa". Ba tài liệu sau đều đứng trên tài liệu này, nên sai ở đây là sai cả bộ.
 
+## Dùng ở đâu trong quy trình presales
+
+| Mốc | Việc | Tài liệu |
+|---|---|---|
+| **Nhận lead, có hồ sơ khách gửi** | **hiểu doanh nghiệp làm gì, vận hành ra sao** | **bước 1 - tài liệu này** |
+| Sau khảo sát, có danh sách yêu cầu | chốt hiểu đúng, chấm đáp ứng | bước 2 quy trình và mức đáp ứng |
+| Nội bộ, trước khi ra giá | bóc giờ, biết giá vốn | bước 3 danh mục BR |
+| Chào giá, trình bày với khách | chốt phạm vi và tiền | bước 4 phương án đề xuất |
+| Khách đồng ý, chuẩn bị ký | đính kèm hợp đồng | bước 5 phụ lục hợp đồng |
+| Sau ký, vào triển khai | thống nhất thao tác từng vị trí | QTUD (ngoài bộ này) |
+
+Làm ngay khi nhận hồ sơ khách, trước mọi tài liệu khác. Ba tài liệu sau đều đứng trên tài liệu này.
+
 ## Khi nào dùng
 
 - "Làm mô hình hoạt động / hiện trạng của khách X"

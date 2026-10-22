@@ -9,6 +9,19 @@ Tài liệu nặng nhất của bộ bốn. Trả lời hai câu hỏi cùng lú
 
 Đây là tài liệu khách soi kỹ nhất, cũng là nơi Viindoo dễ hứa quá nhất. Luật xếp lớp ở dưới sinh ra để chặn việc đó.
 
+## Dùng ở đâu trong quy trình presales
+
+| Mốc | Việc | Tài liệu |
+|---|---|---|
+| Nhận lead, có hồ sơ khách | hiểu doanh nghiệp | bước 1 mô hình hoạt động |
+| **Sau khảo sát, đã có danh sách yêu cầu** | **chốt Viindoo hiểu đúng, chấm mức đáp ứng** | **bước 2 - tài liệu này** |
+| Nội bộ, trước khi ra giá | bóc giờ, biết giá vốn | bước 3 danh mục BR |
+| Chào giá, trình bày với khách | chốt phạm vi và tiền | bước 4 phương án đề xuất |
+| Khách đồng ý, chuẩn bị ký | đính kèm hợp đồng | bước 5 phụ lục hợp đồng |
+| Sau ký, vào triển khai | thống nhất thao tác từng vị trí | QTUD (ngoài bộ này) |
+
+Làm sau khi khách đã phản hồi tài liệu bước 1 và đã gom đủ yêu cầu từ khảo sát các phòng ban.
+
 ## Khi nào dùng
 
 - "Vẽ quy trình nghiệp vụ cho khách X"

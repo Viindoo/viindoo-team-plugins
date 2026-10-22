@@ -44,27 +44,19 @@ Ví dụ:
 ## Giờ công
 
 ```python
-"gio": vbr.ap_he_so_ai({
-    "tk": (3, "Expert"),      # Phân tích & Thiết kế - giữ nguyên, không nhân hệ số
-    "lt": (10, "Senior"),     # Lập trình - x0.4
-    "qa": (4, "Junior"),      # QA - x0.5
-    "tl": (2, "Junior"),      # Tài liệu, video - x0.3
+"gio": {
+    "tk": (3, "Expert"),      # Phân tích & Thiết kế
+    "lt": (4, "Senior"),      # Lập trình
+    "qa": (2, "Junior"),      # QA, kiểm thử
+    "dt": (2, "Senior"),      # Đào tạo, nghiệm thu với khách
     "ch": (2, "Senior"),      # Cấu hình & Triển khai
-    "dt": (2, "Senior"),      # Đào tạo, nghiệm thu với khách - giữ nguyên
-})
+    "tl": (1, "Junior"),      # Tài liệu, video
+}
 ```
 
 Khóa hợp lệ: `ks` khảo sát, `tk` phân tích thiết kế, `lt` lập trình, `qa` kiểm thử, `dt` đào tạo và nghiệm thu, `ch` cấu hình triển khai, `tl` tài liệu và video, `gs` giám sát hậu triển khai. **Bảo hành tự tính** bằng 15% giờ lập trình, không khai tay.
 
-`ap_he_so_ai` nhân hệ số cho `lt`, `qa`, `tl`; các giai đoạn khác giữ nguyên. Gọi **đúng một lần** trên giờ gốc - gọi hai lần là giảm giá hai lần.
-
-### Chọn cấp bậc
-
-Theo mức chạm vào lõi, không theo số giờ:
-
-- **Phức tạp** (ghi đè phương thức lõi: luồng kho, sản xuất, kế toán) - cơ cấu Junior/Senior/Expert khoảng 40/40/20, cộng thêm đệm kiểm thử khoảng 20%.
-- **Tiêu chuẩn** - khoảng 55/35/10.
-- **Đơn giản** - khoảng 65/30/5.
+> **Giờ điền vào đây là giờ ĐÃ CHỐT theo quy tắc tính giá hiện hành.** Plugin không giữ công thức quy đổi, không giữ hệ số AI, không giữ đơn giá - hỏi Liên hoặc tra quy tắc hiện hành trước khi bóc giờ, và đừng mang hệ số của dự án cũ sang dự án mới.
 
 Đơn giá từng cấp nằm ở sheet `Bảng giá theo manday` trong chính workbook; chi phí tính bằng tổng của từng cấp nhân đơn giá cấp đó, không dùng đơn giá bình quân.
 

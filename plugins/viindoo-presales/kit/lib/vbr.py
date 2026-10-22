@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Dung Danh muc Yeu cau Nghiep vu (BRL) theo dung cau truc file BR mau JVC Eco.
+"""Dung Danh muc Yeu cau Nghiep vu (BRL) theo dung cau truc file BR chuan Viindoo.
 
 File nay la TAI LIEU NOI BO: dung de boc gio tung cap Junior/Senior/Expert va biet gia von.
 KHONG gui cho khach. Ban gui khach la phuong an HTML (buoc 4), chi ghi tong tien phan phat trien.
@@ -23,6 +23,8 @@ Moi phan tu `rows` la mot dict:
     gio  dict gio cong theo giai doan, chi dat cho hang muc phai lam them:
          {"ks": (gio, cap), "tk": …, "lt": …, "qa": …, "dt": …, "ch": …, "tl": …, "gs": …}
          cap la "Junior" | "Senior" | "Expert". Bao hanh (bh) tu tinh = 15% gio lap trinh.
+         Gio o day la gio DA CHOT theo quy tac tinh gia hien hanh - plugin khong giu cong thuc
+         gia, xem SKILL.md cua viindoo-danh-muc-br.
 """
 from __future__ import annotations
 
@@ -55,16 +57,6 @@ TEN_GIAI_DOAN = {
 }
 COT_CHI_PHI = {"ks": "L", "tk": "O", "lt": "R", "qa": "U", "dt": "X", "ch": "AA", "bh": "AD", "tl": "AG", "gs": "AJ"}
 PHAN_LOAI = ["Tiêu chuẩn", "Cấu hình", "Tích hợp", "Tùy chỉnh", "Phát triển", "Cần làm rõ", "Loại bỏ"]
-
-# He so "tan dung AI toi da" cho hang muc phat trien them: buoc AI lam duoc chi tinh phan
-# chuyen vien duyet, sua, tich hop. Phan tich thiet ke va dao tao/nghiem thu voi khach giu nguyen.
-HE_SO_AI = {"lt": 0.4, "qa": 0.5, "tl": 0.3}
-
-
-def ap_he_so_ai(gio: dict) -> dict:
-    """Nhan he so AI vao gio goc. Goi DUNG MOT LAN tren gio chua nhan."""
-    return {k: ((round(v[0] * HE_SO_AI.get(k, 1), 2)), v[1]) for k, v in gio.items()}
-
 
 def _sach(duong_dan: str) -> str:
     """Lam sach TEN TEP (giu nguyen thu muc) - bo ky tu khong hop le tren he tep."""

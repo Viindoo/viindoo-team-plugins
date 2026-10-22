@@ -8,11 +8,6 @@ Chay thu:
 import os
 import sys
 
-sys.path.insert(0, os.path.join(
-    os.environ.get("CLAUDE_PLUGIN_ROOT", os.path.dirname(os.path.dirname(os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__)))))), "kit", "lib"))
-import vbr  # noqa: E402
-
 KHACH = "Công ty cổ phần Bao bì Mẫu"
 TO_CHUC = [KHACH]
 GHI_CHU = ("Phương án dùng gói Viindoo Express 400 giờ (2 gói Nâng cao 200 giờ); "
@@ -62,8 +57,9 @@ R = [
             "sẵn có: phần nguyên liệu và nhân công đã có, viết thêm phần phân bổ khấu hao máy theo "
             "giờ chạy lấy từ nhật ký máy. Không dựng đối tượng giá thành song song."),
      "note": "Cách phân bổ khấu hao chờ Công ty xác nhận - xem XN-01.",
-     "gio": vbr.ap_he_so_ai({"tk": (3, "Expert"), "lt": (12, "Senior"), "qa": (5, "Junior"),
-                             "tl": (2, "Junior"), "ch": (2, "Senior"), "dt": (2, "Senior")})},
+     # Gio da chot theo quy tac tinh gia hien hanh (hoi Lien) - plugin khong giu cong thuc gia
+     "gio": {"tk": (3, "Expert"), "lt": (12, "Senior"), "qa": (5, "Junior"),
+             "tl": (2, "Junior"), "ch": (2, "Senior"), "dt": (2, "Senior")}},
 
     {"id": "BR-KT-01",
      "ten": "Kết nối hóa đơn điện tử",

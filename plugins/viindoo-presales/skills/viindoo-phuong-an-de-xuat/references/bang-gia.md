@@ -1,67 +1,57 @@
 # Báo giá - cách trình bày
 
-Số liệu lấy từ bảng giá hiện hành và từ danh mục BR đã chốt ở bước 3. **Không nhớ áng chừng, không gõ lại tay** - đọc thẳng workbook BR bằng `openpyxl` để một con số chỉ khai một nơi.
+> **Plugin này không giữ công thức giá và không giữ đơn giá.** Quy tắc tính giá thay đổi theo thời điểm và theo từng khách; hỏi Liên hoặc đọc bảng giá hiện hành trước mỗi lần báo giá. Dưới đây chỉ là **cách trình bày** - phần ổn định giữa các dự án.
+>
+> Số giờ và giá của từng hạng mục lấy từ danh mục BR đã chốt ở bước 3, đọc thẳng bằng `openpyxl`, không gõ lại tay.
 
-## Ba dòng dịch vụ
+## Ba dòng dịch vụ - tách bạch
 
-| Dòng | Bản chất | Cách tính |
+| Dòng | Bản chất | Trong tài liệu gửi khách |
 |---|---|---|
-| Thuê bao Cloud | trả định kỳ theo năm | đơn giá gói trên người dùng trên tháng |
-| Gói Express | combo giờ trọn gói, **không tính ngày công** | giá gói theo số giờ |
-| Dịch vụ phát triển | tùy biến, viết code | nội bộ tính theo ngày công từng cấp; **gửi khách chỉ ghi tổng tiền** |
+| Thuê bao Cloud | trả định kỳ theo năm | chỉ ghi đơn giá gói trên người dùng trên tháng hoặc năm, **không nhân ra tổng** |
+| Gói Express | combo giờ trọn gói, không tính ngày công | giá gói, ưu đãi (nếu đủ điều kiện), thành tiền |
+| Dịch vụ phát triển | tùy biến, viết code | **chỉ tổng tiền và giá từng hạng mục**, không giờ, không đơn giá theo cấp |
 
-Gói Express chỉ gồm tính năng có sẵn và cấu hình. Phần viết code tách thành dòng dịch vụ riêng - không gộp giờ tùy biến vào gói Express.
+Gói Express chỉ gồm tính năng có sẵn và cấu hình. Phần viết code là dòng dịch vụ riêng - không gộp giờ tùy biến vào gói Express.
 
-## Mục 8.1 - trả một lần
+## Bố cục mục Báo giá (theo mẫu Quang Thắng)
 
-Bảng: Hạng mục | Đơn giá | Ưu đãi | Thành tiền.
+**Thẻ tổng nổi bật** trước bảng: tổng dịch vụ trả một lần, kèm một dòng phụ nói gồm những gì (mấy gói Express, bao nhiêu giờ, mấy hạng mục phát triển).
 
-- **Gói Express**: ghi giá gói, ưu đãi (nếu có), thành tiền. Một dòng, kèm ghi chú nhỏ dưới số.
-- **Dịch vụ phát triển**: một dòng tổng. Danh sách từng hạng mục và giá từng hạng mục nằm ở Mục 3.
-- **Nâng cấp phiên bản** (nếu có): 54.000.000 đ một phiên bản, phiên bản kế tiếp giảm 50%. Ví dụ nâng từ 17 lên 19 là 54 triệu cộng 27 triệu. Viindoo tặng thì vẫn ghi đủ giá rồi ghi ưu đãi 100% - **không ghi "không tính phí" trần**.
+**7.1 Dịch vụ trả một lần** - bảng bốn cột: Dịch vụ | Đơn giá | Số lượng | Thành tiền.
 
-Ghi "Không thuộc đối tượng chịu thuế GTGT" theo mẫu.
+- Dòng Express ghi rõ trong ô mô tả: nguyên giá mỗi gói nhân số gói, rồi dòng ưu đãi. Mô tả kèm "phạm vi tại Mục 2".
+- Mỗi hạng mục phát triển một dòng, ghi "mô tả tại Mục 3".
+- Dòng tổng in đậm.
 
-## Ưu đãi 15% gói Express
+**Năm ghi chú bắt buộc dưới bảng** (gạch ý có nhãn):
 
-Chỉ áp cho gói Express **đầu tiên** của khách dùng Viindoo Cloud. Khách đã từng mua gói Express trước đó thì gói sau tính đủ giá.
+1. **Ưu đãi Cloud** - nêu rõ số tiền ưu đãi và **điều kiện thu hồi**: ưu đãi áp dụng với điều kiện khách dùng thuê bao Cloud trong suốt thời gian triển khai và thời gian hỗ trợ hậu triển khai; ngừng trước thời hạn thì phần ưu đãi được thu lại.
+2. **Thuế** - không thuộc đối tượng chịu thuế giá trị gia tăng theo quy định hiện hành.
+3. **Phát triển** - tính theo hạng mục, đã gồm phân tích thiết kế, lập trình, kiểm thử, đào tạo nghiệm thu, bảo hành và tài liệu hướng dẫn. Thêm câu: chi phí đã áp dụng AI hỗ trợ lập trình, kiểm thử và viết tài liệu.
+4. **Chưa gồm** - phí thuê bao và hạ tầng Cloud; **chi phí đi lại, ăn ở của chuyên viên Viindoo khi làm việc tại Công ty**; thiết bị phần cứng; bảo trì phần phát triển sau thời hạn bảo hành.
+5. **Số liệu chính thức** - phạm vi và thời lượng từng hạng mục chốt sau giai đoạn Khảo sát và Lập kế hoạch; tổng giờ của gói cố định theo hợp đồng.
 
-**Kiểm trước khi ghi ưu đãi**: tra lịch sử đơn hàng của khách. Đây là lỗi đã xảy ra thật, giảm giá nhầm cho khách cũ.
+**7.2 Dịch vụ trả định kỳ theo năm** - bảng hai cột: Dịch vụ | Đơn giá. Ghi chú: số lượng người dùng chốt tại thời điểm chạy chính thức theo danh sách nhân sự thực tế - **không nhân sẵn ra tổng năm thứ nhất** để tránh đưa ra một con số trông như chính xác trong khi số người dùng chưa được xác nhận. Thêm: gói thuê bao bao trọn ứng dụng trong bản tiêu chuẩn cho các nghiệp vụ nêu tại Mục 2; hạ tầng, sao lưu, nâng cấp do Viindoo đảm nhiệm.
 
-## Mục 8.2 - trả định kỳ theo năm
+## Nâng cấp phiên bản
 
-Chỉ ghi **đơn giá gói** trên người dùng trên tháng. Không nhân ra tổng tiền năm - số người dùng còn đổi.
+Khi có hạng mục nâng cấp, ghi **đủ giá theo bảng giá** rồi ghi ưu đãi thành một dòng riêng - kể cả khi Viindoo tặng thì vẫn ghi đủ giá rồi ưu đãi 100%, **không ghi "không tính phí" trần**. Mức giá và mức giảm cho phiên bản kế tiếp: hỏi Liên hoặc tra bảng giá hiện hành.
 
-## Mục "Chưa gồm"
+## Ưu đãi gói Express
 
-Luôn có, và luôn có dòng: **chi phí đi lại, ăn ở của chuyên viên Viindoo khi làm việc tại trụ sở Công ty**.
+Chỉ áp cho gói Express **đầu tiên** của khách dùng Cloud. Khách đã từng mua Express trước đó thì gói sau tính đủ giá. **Tra lịch sử đơn hàng của khách trước khi ghi ưu đãi** - đây là lỗi đã xảy ra thật, giảm giá nhầm cho khách cũ.
 
-Thêm những gì thực sự nằm ngoài: hạ tầng máy chủ nếu khách tự vận hành, phí bên thứ ba (hóa đơn điện tử, chữ ký số, vận chuyển), dữ liệu khách tự nhập.
+## Khi giá đã bị chốt trước
 
-## Cách triển khai theo phạm vi
+Có dự án giá tổng đã chốt trong hợp đồng trước khi phương án hoàn thiện. Khi đó phần phát triển được phân bổ ngược từ tổng đã chốt chứ không tính xuôi - đây là **trường hợp đặc biệt của từng deal**, không phải cách làm chuẩn, và không mang sang dự án khác.
 
-Khách hỏi vì sao không làm theo cách tính theo phạm vi: chi phí cách đó thường gấp hai đến ba lần gói Express, vì phải làm rõ phạm vi, xác định trong và ngoài phạm vi, và dự phòng mở rộng. Nói thẳng con số tương đối, đừng né.
-
-## Những chữ không được xuất hiện trong bản gửi khách
-
-"ngày công", "Junior", "Senior", "Expert", "manday" - ở bất kỳ đâu: thẻ đầu trang, tóm tắt, tiêu đề cột, ghi chú, biểu tiến độ.
-
-```python
-con_sot = vdoc.kiem_ban_gui_khach(duong_dan_tep)
-assert not con_sot, f"Còn từ cấm: {con_sot}"
-```
-
-## Lấy số từ workbook BR
+## Soát trước khi giao
 
 ```python
-import openpyxl
-wb = openpyxl.load_workbook(duong_dan_br, data_only=True)   # data_only: lấy giá trị đã tính
-ws = wb["R - Business Requirements"]
-gia = {}
-for r in range(2, ws.max_row):
-    ma, pl, tong = ws.cell(r, 2).value, ws.cell(r, 39).value, ws.cell(r, 38).value
-    if pl == "Phát triển" and tong:
-        gia[ma] = tong
+phat_hien = vdoc.kiem_ban_gui_khach(duong_dan_tep)
+print(vdoc.in_ket_qua_soat(phat_hien))
 ```
 
-Workbook phải được mở và lưu lại bằng Excel hoặc LibreOffice một lần thì `data_only=True` mới có giá trị - openpyxl không tự tính công thức. Chưa có giá trị thì tính lại trong Python từ chính giờ và bảng giá, đừng đoán.
+- Mức **PHẢI SỬA**: "Junior", "Senior", "Expert", "manday" - cách tính giá nội bộ lọt ra ngoài.
+- Mức **cần xem**: "ngày công", "giờ công" đứng gần từ chỉ tiền. Từ này có thể là **nghiệp vụ của chính khách** (ví dụ "lương theo ngày công" của họ) - đọc trích đoạn rồi tự quyết, đừng sửa máy móc. Chỗ nào chắc chắn là nghiệp vụ khách thì truyền `bo_qua=["ngày công"]`.

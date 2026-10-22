@@ -123,3 +123,32 @@ footer{text-align:center; font-size:11px; color:var(--viindoo-text-muted); margi
   table thead tr{break-after:avoid-page; page-break-after:avoid;}
   table.price-table td{padding:6px 12px;}
 }
+
+/* ---- Bổ sung theo bản Quang Thắng (20/10/2026): khối phát triển, cần làm rõ, bảng tiến độ ---- */
+.plan-list{margin:0 0 18px 20px; padding:0;} .plan-list li{margin:0 0 6px; text-align:justify;}
+ul.kv{margin:4px 0 14px 18px; padding:0;} ul.kv li{margin:0 0 5px;} ul.kv.note{font-size:12px; color:#6B6D70;}
+ul.cell{margin:0 0 0 16px; padding:0;} ul.cell li{margin:0 0 4px; text-align:justify;}
+section > p, .exec-summary p, .card p, .callout, .biz-intro{text-align:justify; text-justify:inter-word; hyphens:none;}
+.biz-intro{margin:0 0 8px; color:#282F33;}
+.biz h3{margin:18px 0 4px;}
+.lamro{margin:8px 0 0; padding:9px 12px; background:#FFF8E6; border-left:3px solid #C99700; font-size:12.5px;}
+.lamro .t{font-weight:700; color:#8a6a00; display:block; margin-bottom:3px;}
+.lamro ul{margin:0 0 0 16px; padding:0;} .lamro li{margin:0 0 3px;}
+.dev{border:1px solid #E3E6E8; border-radius:6px; padding:14px 16px; margin:0 0 16px;}
+.dev h3{margin:0 0 4px; color:#7F4282;}
+.dev .price{float:right; font-weight:700; color:#00BBCE;}
+.gantt-overview .ov-step.w5{background:#7a3d7d;}
+.gantt-overview .ov-step.w6{background:var(--viindoo-primary,#00BBCE);}
+.gantt-overview .ov-step.w7{background:var(--viindoo-secondary,#7F4282);}
+.lim{display:inline-block;margin-top:5px;font-size:11.5px;color:#8a6a00;background:#FFF8E6;padding:2px 7px;border-radius:3px;}
+.dev h5{margin:10px 0 4px; font-size:12.5px; text-transform:uppercase; letter-spacing:.3px; color:#6B6D70;}
+table.gantt-table{table-layout:fixed; width:100%; font-size:11px;}
+table.gantt-table th:first-child, table.gantt-table td.label{width:40%;}
+table.gantt-table th:nth-child(2), table.gantt-table td.hrs{width:7%; white-space:nowrap; font-size:10.5px;}
+table.gantt-table th:nth-child(n+3){width:2.65%; padding-left:0; padding-right:0; text-align:center; font-size:10px;}
+@media print {
+  table tr, .card, .stat-card, .exec-card, .step, .callout, .price-highlight, .dev, .lamro{break-inside:avoid; page-break-inside:avoid;}
+  table.cap-table thead, table.gantt-table thead, table.price-table thead{display:table-header-group;}
+  .biz h3{break-after:avoid-page; page-break-after:avoid;}
+  .plan-list li{break-inside:avoid;}
+}

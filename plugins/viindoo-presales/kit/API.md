@@ -1,6 +1,8 @@
 # Kit tài liệu presales - hàm dùng chung
 
-Bốn skill của bộ hồ sơ khách hàng đều dựng tài liệu từ kit này, nên mọi tài liệu gửi đi cùng một bộ màu, font, logo và cùng một cách hành xử của ô ý kiến.
+Năm skill của bộ hồ sơ khách hàng đều dựng tài liệu từ kit này, nên mọi tài liệu gửi đi cùng một bộ màu, font, logo và cùng một cách hành xử của ô ý kiến.
+
+**Kit không giữ công thức giá, hệ số hay đơn giá.** Quy tắc tính giá đổi theo thời điểm và theo từng khách - hỏi Liên hoặc tra bảng giá hiện hành, đừng mang hệ số của dự án cũ sang dự án mới.
 
 ## Nạp kit
 
@@ -19,14 +21,19 @@ Trong phiên Claude Code, `CLAUDE_PLUGIN_ROOT` đã trỏ sẵn vào thư mục 
 | Hàm | Dùng để |
 |---|---|
 | `tai_lieu(tieu_de, mo_ta, khach, ngay, phan, css_them, js_them, mo_dau, chan_trang)` | tài liệu dài đọc trên màn hình (bước 1, bước 2) |
-| `phuong_an(tieu_de, mo_ta, meta, the_tag, tom_tat_so, tom_tat_y, phan, css_them)` | phương án in PDF theo bố cục JVC v3 (bước 4) |
+| `phuong_an(tieu_de, mo_ta, meta, the_tag, tom_tat_so, tom_tat_y, phan, css_them)` | phương án in PDF theo mẫu chuẩn (bước 4) |
 | `gach_y(muc)` | gạch ý có nhãn; phần tử là chuỗi hoặc cặp `("Nhãn", "nội dung")` |
 | `bang(cot, dong, lop)` | bảng bo tròn theo brand |
 | `the_so(so, nhan)` | thẻ số lớn - **chỉ cho số của Viindoo**, không cho số lấy từ hệ thống khách |
 | `tien(v)` | `382500000` thành `382.500.000 đ` |
 | `css(ten)` | đọc CSS trong kit: `tai-lieu`, `phuong-an`, `quy-trinh`, `y-kien` |
 | `logo_svg(nen_toi)`, `logo_b64(nen_toi)`, `favicon_b64()` | logo màu (cyan + tím) hoặc bản đảo màu cho nền tối |
-| `kiem_ban_gui_khach(duong_dan, them)` | soát tệp gửi khách còn chữ "ngày công", "Junior", "Senior", "Expert", "manday" không; trả về danh sách rỗng là đạt |
+| `kiem_ban_gui_khach(duong_dan, them, bo_qua)` | soát tệp gửi khách còn cách tính giá nội bộ không; trả về list phát hiện, rỗng là đạt |
+| `in_ket_qua_soat(phat_hien)` | in gọn kết quả soát ra dòng lệnh |
+| `nhom_nghiep_vu(tieu_de, cau_dan, muc, can_lam_ro)` | một nhóm trong Mục 2 của phương án |
+| `khoi_can_lam_ro(muc)` | khung vàng "Cần làm rõ ở giai đoạn Khảo sát" |
+| `khoi_phat_trien(ten, gia, tom_tat, bai_toan, se_lam, vi_sao, gioi_han)` | một hạng mục trong Mục 3, có giá riêng |
+| `NGUYEN_TAC_PHAT_TRIEN` | khối nguyên tắc đặt đầu Mục 3 |
 
 `phan` là list dict `{"id", "so", "ten", "noi_dung"}`; mục lục sinh ra từ chính danh sách đó.
 
@@ -64,12 +71,17 @@ Hạng mục đáp ứng: `{"br", "nguon", "yeu_cau", "phan_co", "co", "phan_thi
 
 | Hàm | Dùng để |
 |---|---|
-| `dung(rows, out, khach, to_chuc, diem_xac_nhan, ghi_chu_chi_phi, mau, sap_xep)` | dựng workbook từ mẫu JVC sạch |
-| `ap_he_so_ai(gio)` | nhân hệ số AI vào giờ gốc - gọi đúng một lần |
-| `HE_SO_AI` | `{"lt": 0.4, "qa": 0.5, "tl": 0.3}` |
+| `dung(rows, out, khach, to_chuc, diem_xac_nhan, ghi_chu_chi_phi, mau, sap_xep)` | dựng workbook từ mẫu chuẩn đã khử dữ liệu khách |
 | `COT_GIO`, `TEN_GIAI_DOAN`, `PHAN_LOAI` | tra cứu cột và giá trị hợp lệ |
 
 Mẫu: `kit/mau/danh-muc-br.xlsx`. Schema một dòng BR xem `skills/viindoo-danh-muc-br/references/schema-du-lieu.md`.
+
+## Soát bản gửi khách
+
+`kiem_ban_gui_khach()` trả về list dict `{"tu", "muc", "trich"}`:
+
+- `muc = "cam"` - **phải sửa**: "Junior", "Senior", "Expert", "manday". Cách tính giá nội bộ lọt ra ngoài.
+- `muc = "can_xem"` - **đọc rồi tự quyết**: "ngày công", "giờ công" đứng gần từ chỉ tiền. Từ này có thể là nghiệp vụ của chính khách, ví dụ "lương theo ngày công" - không sửa máy móc. Chắc chắn là nghiệp vụ khách thì truyền `bo_qua=["ngày công"]`.
 
 ## Quy ước chung cho mọi tài liệu
 
