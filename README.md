@@ -4,8 +4,23 @@ Plugin Claude Code dùng chung cho đội presales và marketing Viindoo. Repo p
 
 | Plugin | Dành cho | Gồm |
 |---|---|---|
-| `viindoo-presales` | Tư vấn, presales | Skill `spec-from-source`, `spec-to-bpmn`, `bpmn-validate`, `bpmn-to-drawio`, `bpmn-to-html`; lệnh `/viindoo-presales:bpmn-pipeline`; agent `bpmn-builder`, `bpmn-reviewer`, `viindoo-deliverable-reviewer`, `viindoo-source-explorer`; brand Viindoo (`brand/`) |
+| `viindoo-presales` | Tư vấn, presales | **Bộ bốn tài liệu hồ sơ khách hàng**: `viindoo-mo-hinh-hoat-dong`, `viindoo-quy-trinh-dap-ung`, `viindoo-danh-muc-br`, `viindoo-phuong-an-de-xuat`, lệnh `/viindoo-presales:ho-so-khach`. **Bộ BPMN**: `spec-from-source`, `spec-to-bpmn`, `bpmn-validate`, `bpmn-to-drawio`, `bpmn-to-html`, lệnh `/viindoo-presales:bpmn-pipeline`. Agent `bpmn-builder`, `bpmn-reviewer`, `viindoo-deliverable-reviewer`, `viindoo-source-explorer`. Brand (`brand/`) và kit khung tài liệu (`kit/`) |
 | `viindoo-marketing` | Marketing, content | Skill `vi` (sinh tiếng Việt qua Gemini), `viindoo-blog-publish` (đăng blog song ngữ viindoo.com dạng nháp); agent `vietnamese-writer` |
+
+## Bộ bốn tài liệu hồ sơ khách hàng
+
+Trình tự chuẩn khi tiếp một khách mới. Mỗi bước là một tài liệu gửi khách (trừ bước 3 là nội bộ), bước sau đứng trên bước trước đã được khách xác nhận.
+
+| Bước | Skill | Ra cái gì | Gửi khách |
+|---|---|---|---|
+| 1 | `viindoo-mo-hinh-hoat-dong` | Phân tích hiện trạng và mô hình vận hành (HTML) | có |
+| 2 | `viindoo-quy-trinh-dap-ung` | Quy trình nghiệp vụ mục tiêu và mức đáp ứng (HTML, sơ đồ làn + bốn lớp đáp ứng) | có |
+| 3 | `viindoo-danh-muc-br` | Danh mục Yêu cầu Nghiệp vụ theo mẫu JVC (Excel, bóc giờ từng cấp) | **không** |
+| 4 | `viindoo-phuong-an-de-xuat` | Phương án đề xuất triển khai theo mẫu JVC v3 (HTML, báo giá) | có |
+
+Tài liệu khách mở bằng trình duyệt, đánh dấu và ghi ý kiến ngay trên trang, bấm một nút in phiếu ý kiến ra PDF gửi lại.
+
+Chạy cả bộ có điểm dừng: `/viindoo-presales:ho-so-khach <Khách>`. Khung tài liệu, brand, sơ đồ, mẫu Excel dùng chung nằm ở `plugins/viindoo-presales/kit/` - xem `kit/API.md`.
 
 ## Cài đặt
 
@@ -33,6 +48,11 @@ Chỉ cần plugin nào thì cài plugin đó. Máy phải đăng nhập GitHub 
 
 Không cần gõ tên skill, cứ nói việc cần làm:
 
+- "Làm mô hình hoạt động của khách X" -> tài liệu 1 trong bộ bốn.
+- "Viindoo đáp ứng tới đâu yêu cầu của khách này" -> tài liệu 2, sơ đồ quy trình + mức đáp ứng bốn lớp.
+- "Làm BR cho khách X" -> workbook Excel theo mẫu JVC (nội bộ).
+- "Làm phương án đề xuất / báo giá cho khách X" -> tài liệu 4 gửi khách.
+- "Chạy cả bộ hồ sơ cho khách X" -> `/viindoo-presales:ho-so-khach <Khách>` (dừng giữa các bước để duyệt).
 - "Tao có biên bản họp khách, sinh bộ BPMN giúp" -> chuỗi spec -> BPMN -> drawio/HTML.
 - "Review QTUD này trước khi gửi khách" -> `viindoo-deliverable-reviewer`.
 - "Viindoo 17 có tính năng X không" -> `viindoo-source-explorer`.

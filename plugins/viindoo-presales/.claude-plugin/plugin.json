@@ -1,7 +1,7 @@
 {
   "name": "viindoo-presales",
-  "version": "1.0.0",
-  "description": "Presales Viindoo: spec-from-source, spec-to-bpmn, bpmn-validate, bpmn-to-drawio, bpmn-to-html, lệnh /bpmn-pipeline, agent bpmn-builder, bpmn-reviewer, viindoo-deliverable-reviewer, viindoo-source-explorer.",
+  "version": "1.1.0",
+  "description": "Presales Viindoo. Bộ bốn tài liệu hồ sơ khách hàng: viindoo-mo-hinh-hoat-dong, viindoo-quy-trinh-dap-ung, viindoo-danh-muc-br, viindoo-phuong-an-de-xuat, lệnh /ho-so-khach. Bộ BPMN: spec-from-source, spec-to-bpmn, bpmn-validate, bpmn-to-drawio, bpmn-to-html, lệnh /bpmn-pipeline. Agent bpmn-builder, bpmn-reviewer, viindoo-deliverable-reviewer, viindoo-source-explorer. Kit khung tài liệu brand Viindoo dùng chung.",
   "author": { "name": "Nguyễn Thị Liên" },
-  "keywords": ["viindoo", "presales", "bpmn", "qtud", "fit-gap"]
+  "keywords": ["viindoo", "presales", "bpmn", "qtud", "fit-gap", "br", "phuong-an", "bao-gia"]
 }
