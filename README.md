@@ -1,11 +1,12 @@
 # Viindoo team plugins
 
-Plugin Claude Code dùng chung cho đội presales và marketing Viindoo. Repo private: chỉ thành viên org Viindoo cài được. Danh mục cài đặt nằm ở marketplace công khai [Viindoo/claude-plugins](https://github.com/Viindoo/claude-plugins), trỏ về repo này theo SHA.
+Plugin Claude Code dùng chung cho đội presales, marketing và làm video Viindoo. Repo private: chỉ thành viên org Viindoo cài được. Danh mục cài đặt nằm ở marketplace công khai [Viindoo/claude-plugins](https://github.com/Viindoo/claude-plugins), trỏ về repo này theo SHA.
 
 | Plugin | Dành cho | Gồm |
 |---|---|---|
 | `viindoo-presales` | Tư vấn, presales | **Bộ năm tài liệu hồ sơ khách hàng**: `viindoo-mo-hinh-hoat-dong`, `viindoo-quy-trinh-dap-ung`, `viindoo-danh-muc-br`, `viindoo-phuong-an-de-xuat`, `viindoo-phu-luc-hop-dong`, lệnh `/viindoo-presales:ho-so-khach`. **Bộ BPMN**: `spec-from-source`, `spec-to-bpmn`, `bpmn-validate`, `bpmn-to-drawio`, `bpmn-to-html`, lệnh `/viindoo-presales:bpmn-pipeline`. Agent `bpmn-builder`, `bpmn-reviewer`, `viindoo-deliverable-reviewer`, `viindoo-source-explorer`. Brand (`brand/`) và kit khung tài liệu (`kit/`) |
 | `viindoo-marketing` | Marketing, content | Skill `vi` (sinh tiếng Việt qua Gemini), `viindoo-blog-publish` (đăng blog song ngữ viindoo.com dạng nháp); agent `vietnamese-writer` |
+| `viindoo-video` | Marketing, làm video | Skill `viindoo-motion-video` (video ngành / tổng thể bằng motion-graphics), `viindoo-video-cum-nghiep-vu` (clip tổng thể theo cụm nghiệp vụ, song ngữ), `viindoo-module-launch` (clip + bài tin ra mắt module). Nguyên tắc video chung (`references/video-principles.md`), engine dựng hình (`engine/`), brand, khuôn script. Xem `plugins/viindoo-video/README.md` |
 
 ## Bộ năm tài liệu hồ sơ khách hàng
 
@@ -35,6 +36,7 @@ Trong Claude Code:
 /plugin marketplace add Viindoo/claude-plugins
 /plugin install viindoo-presales@viindoo-plugins
 /plugin install viindoo-marketing@viindoo-plugins
+/plugin install viindoo-video@viindoo-plugins
 ```
 
 Chỉ cần plugin nào thì cài plugin đó. Máy phải đăng nhập GitHub có quyền đọc repo này (`gh auth login`). Khi có bản mới: `/plugin marketplace update viindoo-plugins`.
@@ -48,6 +50,8 @@ Chỉ cần plugin nào thì cài plugin đó. Máy phải đăng nhập GitHub 
 | Mã nguồn Viindoo | presales (`viindoo-source-explorer`), marketing (`viindoo-blog-publish`) | Clone về `~/viindoo/<phiên bản>/` (ví dụ `~/viindoo/17.0/`), hoặc đặt `export VIINDOO_SRC=<thư mục>` |
 | Plugin `odoo-ai-agents` (marketplace `viindoo-plugins`) | nên có | Cho Odoo Semantic MCP (tra mã nguồn nhanh, không cần clone) |
 | MCP chrome-devtools + tài khoản quản trị blog viindoo.com | marketing (`viindoo-blog-publish`) | Skill chỉ tạo bài **nháp**; người đăng tự bấm Publish |
+| Node.js 18+, FFmpeg, Google Chrome | video | `brew install node ffmpeg`; Chrome ở chỗ khác thì `export CHROME_PATH=...`. Cài thư viện engine một lần: `bash <plugin>/engine/setup.sh` |
+| Python 3 + `playwright`, `Pillow`, `numpy`; Gemini API key (TTS); tài khoản hệ thống demo | video | Chi tiết và biến môi trường (`VIINDOO_VIDEO_WORKDIR`, `VIINDOO_DEMO_*`, `VIDEO_PY`): `plugins/viindoo-video/README.md` |
 
 ## Dùng thế nào
 
@@ -64,6 +68,9 @@ Không cần gõ tên skill, cứ nói việc cần làm:
 - "Viindoo 17 có tính năng X không" -> `viindoo-source-explorer`.
 - "Viết caption Facebook cho sự kiện Y" -> `vi`.
 - "Đăng bài này lên blog Viindoo" -> `viindoo-blog-publish`.
+- "Dựng video tổng thể ngành cơ khí theo chuẩn forwarder" -> `viindoo-motion-video`.
+- "Làm clip kế toán đi" / "sang bản tiếng Anh của clip Nhân sự" -> `viindoo-video-cum-nghiep-vu`.
+- "Module viin_xxx vừa lên bản 19, làm clip ra mắt" -> `viindoo-module-launch`.
 
 ## Đóng góp
 

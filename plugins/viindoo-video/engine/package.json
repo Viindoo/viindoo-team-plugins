@@ -1,0 +1,14 @@
+{
+  "name": "viindoo-motion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Viindoo branded, data-driven motion-graphics video renderer. Free + agent-automatable: GSAP + headless Chrome + FFmpeg.",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "puppeteer-core": "^23.0.0"
+  }
+}
