@@ -26,7 +26,7 @@ Năng lực · Đào tạo · Chấm công · Tăng ca · Lương · Đánh giá
 
 ## Bước 3 - Dữ liệu demo
 
-Bơm trên hệ thống demo thật (mặc định `https://sanxuat18.viindoo.cloud`), đúng công ty sẽ quay.
+Bơm trên hệ thống demo thật (`$VIINDOO_DEMO_URL`), đúng công ty sẽ quay.
 Tên cơ sở dữ liệu và tài khoản đặt qua biến môi trường `VIINDOO_DEMO_URL`, `VIINDOO_DEMO_DB`,
 `VIINDOO_DEMO_LOGIN`, `VIINDOO_DEMO_PASSWORD` (xin người quản lý hệ thống demo, không ghi vào tệp).
 Kết nối qua `demo-data/conn.py` (XML-RPC); script bơm dữ liệu `demo-data/build*.py` viết riêng cho từng cụm.
@@ -139,9 +139,8 @@ TRƯỚC cảnh 3, 9, 14 và các cảnh đó render ngắn đi đúng bằng đ
 | **Đặt góc** | chỉ cho nội dung dạng tổng hợp (ý 1 / ý 2, màn tổng kết) hoặc chỗ không cần màn hình rộng. Không bao giờ đặt lên cảnh dữ liệu. |
 | **Nền mờ** | chỉ màn mở đầu, và **phải mờ nhẹ để nhìn rõ mặt người**. Lớp phủ chỉ đậm ở dải chữ rồi buông nhanh; từ 70% khung trở ra gần như để nguyên ảnh gốc. Tối đều cả khung là Liên loại. |
 
-**Mỗi cụm lấy b-roll MỚI, không dùng lại đoạn của cụm trước.** NAS Viindoo có nhiều thư mục
-quay thô (`/Marketing/Video/Văn phòng Viindoo`, `/Marketing/Video/Họp khối ...`,
-`/Marketing/Video/Doanh nghiệp/...`, `/Marketing/03. Sự kiện/...`). **Ưu tiên tệp quay thô** -
+**Mỗi cụm lấy b-roll MỚI, không dùng lại đoạn của cụm trước.** Kho b-roll nội bộ có nhiều thư mục
+quay thô (văn phòng, họp, doanh nghiệp, sự kiện). **Ưu tiên tệp quay thô** -
 các bản dựng sẵn như Storytelling có **phụ đề tiếng Anh cháy vào hình**, phải cắt dải dưới rồi
 phóng lại mới dùng được.
 
@@ -154,10 +153,8 @@ ffmpeg -ss <giây bắt đầu> -t <độ dài> -i <tệp gốc> -an \
   -c:v libx264 -preset slow -crf 18 <đích>.mp4
 ```
 
-**Vào NAS bằng DSM API, không gắn ổ.** `viindoo.synology.me` mở cổng 5000 (giao diện web DSM)
-nhưng **SMB 445 đóng**, không gắn ổ từ máy được. Dùng `SYNO.API.Auth` lấy `sid` rồi
-`SYNO.FileStation.List` / `.Search` / `.Download`; tài khoản truyền qua biến môi trường, không
-ghi vào tệp. Tệp gốc tải về để riêng (`$VIINDOO_VIDEO_WORKDIR/broll/goc/`), chỉ đoạn đã
+**Kho b-roll nội bộ**: hỏi người phụ trách media lấy địa chỉ và quyền;
+tài khoản truyền qua biến môi trường, không ghi vào tệp. Tệp gốc tải về để riêng (`$VIINDOO_VIDEO_WORKDIR/broll/goc/`), chỉ đoạn đã
 cắt mới vào dây chuyền.
 
 **Chọn hình:** ưu tiên cảnh **nhiều người** - họp quanh bàn, dãy bàn làm việc song song, đội thi

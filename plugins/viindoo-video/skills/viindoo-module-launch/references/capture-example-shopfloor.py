@@ -1,8 +1,8 @@
-# VÍ DỤ THAM KHẢO (không chạy độc lập): kịch bản quay thao tác thật cho clip ra mắt Điều hành xưởng sản xuất trên instance demo sanxuat18.
+# VÍ DỤ THAM KHẢO (không chạy độc lập): kịch bản quay thao tác thật cho clip ra mắt Điều hành xưởng sản xuất trên instance demo.
 # Dùng để học cách: làm trên bản sao lệnh + file trạng thái + dọn trong finally; ghi video từng cảnh (record_video), vòng chạm, cắt thời gian chết;
 # đổi ngôn ngữ người dùng + tên hiển thị tạm cho bản EN rồi trả lại. Phụ thuộc approval_common.py / capture_shots.py của bộ clip cơ khí (không kèm).
 # Thông tin đăng nhập lấy từ biến môi trường ODOO_URL, ODOO_DB, ODOO_USER, ODOO_PASSWORD.
-"""Real screenshots + short screen videos of Shop Floor Control (viin_mrp_workorder) on sanxuat18, company 4.
+"""Real screenshots + short screen videos of Shop Floor Control (viin_mrp_workorder) on the demo instance, company 4.
 Run:  $VIDEO_PY capture.py vi|en   (python co playwright)
 Output: ../sf_<lang>/assets/shots_real/<key>.png + <key>.mp4 + shots.json (Shooter format + video, video_w, video_h, duration).
 

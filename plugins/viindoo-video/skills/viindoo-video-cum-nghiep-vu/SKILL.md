@@ -47,7 +47,7 @@ khi người xem nhìn hoặc nghe. Không có cổng kiểm thì chỉ phát hi
 |---|---|---|---|
 | 1 | **Tìm đối tượng** | **Ai xem clip này**: ngành nào, công ty cỡ nào, đang dùng gì, **bài toán** của họ là gì, **kỳ vọng** gì khi dùng cụm này | Người duyệt nội dung duyệt chân dung đối tượng bằng chữ. Chưa có đối tượng thì CHƯA được viết góc |
 | 2 | **Chốt góc** | Từ chân dung đó viết **hai mục đích** của cụm và **dòng chảy 8-10 bước** | Người duyệt duyệt góc + dòng chảy bằng chữ, trước khi đụng tới hình |
-| 3 | **Dữ liệu demo** | Bơm dữ liệu thật trên hệ thống demo (`VIINDOO_DEMO_URL`, mặc định `sanxuat18.viindoo.cloud`) | Số trên màn phải tự giải thích được, không mâu thuẫn nhau |
+| 3 | **Dữ liệu demo** | Bơm dữ liệu thật trên hệ thống demo (`VIINDOO_DEMO_URL`) | Số trên màn phải tự giải thích được, không mâu thuẫn nhau |
 | 4 | **Bộ lọc đã lưu** | Mỗi màn một bộ lọc tên `VIDEO <CỤM> - Cxx ...` | Mở lại bằng tên, ra đúng số định khoanh |
 | 5 | **QUAY màn** | `quay_fw.py` - quay thật 1280x720 @1.5, kịch bản thao tác từng cảnh | Trích khung hình ra **nhìn tận mắt**: đúng bộ lọc, đúng tập bản ghi, có số chưa |
 | 6 | **Viết lời** | `tts_<lang>_fw.py` - một đoạn một cảnh | Đọc to lên: mỗi đoạn có đúng một con số làm trụ |
@@ -92,7 +92,7 @@ Chi tiết từng bước nằm ở `references/`:
    chuột thật thì bỏ hẳn.
 10. **B-roll người thật mượn ĐUÔI cảnh đứng trước**, cảnh đó render ngắn đi đúng bằng độ dài b-roll.
     Nhờ vậy tổng thời lượng và lời đọc không đổi - không phải thu lại tiếng.
-11. **Mỗi cụm lấy b-roll MỚI trên NAS, không dùng lại đoạn của cụm trước** (Liên 30/10/2026). Ưu
+11. **Mỗi cụm lấy b-roll MỚI từ kho nội bộ, không dùng lại đoạn của cụm trước** (Liên 30/10/2026). Ưu
     tiên tệp quay thô - bản đã dựng (Storytelling) có phụ đề tiếng Anh cháy vào hình. Ưu tiên cảnh
     NHIỀU NGƯỜI; tránh một người ngồi gõ máy một mình.
 12. **Ba kiểu đặt hình, đừng đặt nhầm chỗ** (Liên 30/10/2026). Toàn khung là mặc định - cảnh người

@@ -62,7 +62,7 @@ QUAY_FW = QUAY
 WEB = os.path.join(HERE, "assets", f"khach-{LANG}.mp4")   # vi du: doan quay khach dien form Lien he tren website (lay tu clip Docs, 1600x900)
 SANKEY = os.path.join(QUAY, "c16-sankey-viindoo-cat.mp4")       # so do chuyen doi tren he thong Viindoo that
 # Ban EN (09/11): ban quay tren Viindoo noi bo co nhan giai doan tieng Viet va can Lien dang nhap ->
-# dung ban quay tren sanxuat18 (action 1110, ten giai doan dich duoc) - quay-fw-en/c16-sankey.webm
+# dung ban quay tren demo (action 1110, ten giai doan dich duoc) - quay-fw-en/c16-sankey.webm
 SANKEY_EN = LANG == "en"
 AICHAT = os.path.join(QUAY, "c06-ai-chat-cat.mp4")               # tro ly AI that tren viindoo.com (da cat doan cho)
 K1 = lambda b: (b, 1)

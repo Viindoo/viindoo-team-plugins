@@ -24,7 +24,7 @@ FONT_B = _x(os.environ.get("VIINDOO_FONT_BOLD") or os.path.join(
     os.path.dirname(ENGINE), "brand", "assets", "fonts", "Montserrat-VF.ttf"))
 CHROME = os.environ.get("CHROME_PATH", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
-DEMO_URL = os.environ.get("VIINDOO_DEMO_URL", "https://sanxuat18.viindoo.cloud")
+DEMO_URL = os.environ.get("VIINDOO_DEMO_URL", "")
 
 
 def demo_login():

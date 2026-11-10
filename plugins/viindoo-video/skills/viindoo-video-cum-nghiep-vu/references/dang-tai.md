@@ -27,7 +27,7 @@ gọi. Kết bằng link đặt demo `https://viindoo.com/` và hashtag.
 | Clip tổng thể / clip ngành / clip cụm nghiệp vụ | **@Viindoo** (kênh chính) |
 | Clip ra mắt module, clip hướng dẫn Docs | @viindoodocs |
 
-Tài khoản YouTube: `media@viindoo.com`. **Mình không có mật khẩu** - người giữ tài khoản kênh tự đăng
+Tài khoản YouTube: do người phụ trách kênh giữ. **Mình không có mật khẩu** - người giữ tài khoản kênh tự đăng
 nhập. Không bao giờ nhập mật khẩu thay họ. Đăng bằng máy thì dùng công cụ `youtube_upload` của plugin
 `odoo-ai-agents` (MCP odoo-media) khi kênh đã được cấu hình ở đó.
 
