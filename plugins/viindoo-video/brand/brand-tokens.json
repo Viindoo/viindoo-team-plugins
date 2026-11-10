@@ -1,0 +1,101 @@
+{
+  "_doc": "Viindoo brand tokens - SSOT canonical machine source. brand.css va bang trong 'Brand Assets.md' deu derive tu file nay. Sua o day truoc, roi regenerate noi khac. Source: https://viindoo.com/vi/page/brand-assets",
+  "brand": "Viindoo",
+  "legal_name": "Viindoo Technology Joint Stock Company",
+  "reg_code": "0201994665",
+  "headquarters": "Room 820-823, Floor 8, Thanh Dat 3 Building, 4 Le Thanh Tong, Hai Phong, Vietnam",
+  "name_rule": "Viet 'Viindoo' (chu V hoa, hai chu i thuong, roi 'ndoo'); khong VIINDOO, khong viindoo, khong ViiNdoo",
+  "colors": {
+    "primary": "#00BBCE",
+    "secondary": "#7F4282",
+    "grey": "#8F8F8F",
+    "grey_light_bg": "#F2F2F2",
+    "white": "#FFFFFF",
+    "text_heading": "#21272B",
+    "text_body": "#282F33",
+    "text_muted": "#6B6D70",
+    "success": "#00B365",
+    "danger": "#00AB61",
+    "warning": "#C99700",
+    "info": "#0099E6"
+  },
+  "color_roles": {
+    "primary": "Mau chinh - cyan; nut chinh, highlight, link",
+    "secondary": "Mau thu cap - tim; logo, action phu",
+    "grey": "Trung tinh",
+    "grey_light_bg": "Nen surface nhat",
+    "text_heading": "Mau chu tieu de",
+    "text_body": "Mau chu noi dung",
+    "text_muted": "Chu phu / disabled",
+    "success": "Trang thai thanh cong",
+    "danger": "Trang thai loi (LUU Y: hex trang khong publish ro - gia tri nay can xac minh lai voi brand team)",
+    "warning": "Trang thai canh bao",
+    "info": "Trang thai thong tin"
+  },
+  "typography": {
+    "marketing": {
+      "heading_font": "Montserrat",
+      "body_font": "Roboto",
+      "heading_stack": "Montserrat, 'Helvetica Neue', Arial, sans-serif",
+      "body_stack": "Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "heading_size_pt": "18-32",
+      "subheading_font": "Roboto",
+      "subheading_size_pt": "14-16",
+      "body_size_pt": "12-13",
+      "line_height": "1.15-1.3",
+      "webfont": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    },
+    "admin_legal": {
+      "font": "Times New Roman",
+      "basis": "Nghi dinh 30/2020/ND-CP (the thuc van ban hanh chinh VN)",
+      "heading": "UPPERCASE, bold, 13-14pt",
+      "body": "regular, 13-14pt",
+      "line_height": "1.15-1.3"
+    },
+    "rule": "Khong dung font ngoai danh sach. Ngoai le: van ban chinh phu bat buoc, hoac form ben thu ba khoa format."
+  },
+  "assets": {
+    "dir": "assets/",
+    "logo": {
+      "vector_color_svg": "assets/logo-color.svg",
+      "vector_inverted_svg": "assets/logo-inverted.svg",
+      "raster_inverted_webp": "assets/logo-inverted-raster.webp",
+      "preview_no_slogan": ["assets/logo-no-slogan-1.webp", "assets/logo-no-slogan-2.webp", "assets/logo-no-slogan-3.webp"],
+      "preview_with_slogan": ["assets/logo-slogan-1.webp", "assets/logo-slogan-2.webp", "assets/logo-slogan-3.webp"],
+      "note": "logo-color.svg = ban MAU CHUAN (Viin #00BBCE + doo #7F4282), dung tren nen trang/sang; tren anh/nen toi thi dat len the trang. Cung duong net voi logo-inverted.svg, chi doi mau trang -> #00BBCE; da doi chieu voi logo-no-slogan-1.webp (10/10/2026). logo-inverted.svg KHONG phai logo trang toan phan: Viin trang + doo tim #7F4282, CHI dung tren nen cyan phang #00BBCE (tren nen toi phan doo tim bi chim). Ban trang toan phan cho nen toi chua co file - tai tu Google Drive (source_urls) hoac hoi brand team.",
+      "source_urls": {
+        "no_slogan_v1_svg_folder": "https://drive.google.com/drive/folders/1FE828x1_k3ZdF2Dy4QMVW_2c53amgCap",
+        "no_slogan_v1_png_folder": "https://drive.google.com/drive/folders/1Q4UsS_6e1nUcIgr7gyU_6GcbpsjeyUfu",
+        "with_slogan_v1_svg_folder": "https://drive.google.com/drive/folders/1j4N4KF2shVGVcd9vrLOs4qV1Yg62Z404",
+        "with_slogan_v1_png_folder": "https://drive.google.com/drive/folders/15Cg1-4U5NeeABsXf7cRdbxuttAmcmE_U"
+      }
+    },
+    "favicon": {
+      "v1_png": "assets/favicon-1.png",
+      "v1_ico": "assets/favicon-1.ico",
+      "v2_png": "assets/favicon-2.png",
+      "v2_ico": "assets/favicon-2.ico",
+      "v3_preview_webp": "assets/favicon-3.webp",
+      "previews": ["assets/favicon-1.webp", "assets/favicon-2.webp", "assets/favicon-3.webp"]
+    },
+    "icons_module_bulk_url": "https://viindoo.com/r/xKB",
+    "templates": {
+      "all_drive_library": "https://viindoo.com/r/zUF",
+      "presentation": "https://viindoo.com/r/jEQ",
+      "company_profile": "https://viindoo.com/r/rjP",
+      "software_overview": "https://viindoo.com/r/UFY",
+      "leaflet_6pp": "https://viindoo.com/r/EUE",
+      "leaflet_a4": "https://viindoo.com/r/iXY",
+      "brochure_a4": "https://viindoo.com/r/J8R"
+    }
+  },
+  "not_published_on_source": [
+    "CMYK / Pantone (print color)",
+    "Logo clear-space / minimum-size / misuse grid",
+    "Tone of voice / writing style guide",
+    "Photography / imagery / illustration style",
+    "Slogan text (chi nhung trong file anh logo, khong co dang text)"
+  ],
+  "source": "https://viindoo.com/vi/page/brand-assets",
+  "captured_on": "2026-06-06"
+}

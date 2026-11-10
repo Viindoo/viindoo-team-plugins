@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="Roboto, Arial, sans-serif">
+<rect width="1920" height="1080" fill="#F7F8FA"/>
+<rect width="1920" height="70" fill="#FFFFFF"/><rect y="70" width="1920" height="1" fill="#E3E5E8"/>
+<text x="40" y="45" font-size="26" font-weight="700" fill="#21272B">Bán hàng</text>
+<text x="220" y="45" font-size="22" fill="#6B6D70">Đơn hàng    Báo cáo    Cấu hình</text>
+<text x="40" y="135" font-size="30" font-weight="700" fill="#21272B">Phân tích bán hàng (dữ liệu mẫu)</text>
+<rect x="40" y="170" width="1840" height="860" rx="8" fill="#FFFFFF" stroke="#E3E5E8"/>
+<text x="80" y="230" font-size="24" font-weight="700" fill="#21272B">Kỳ</text>
+<text x="760" y="230" font-size="24" font-weight="700" fill="#21272B" text-anchor="end">Số đơn</text>
+<text x="1820" y="230" font-size="24" font-weight="700" fill="#21272B" text-anchor="end">Doanh thu (đ)</text>
+<rect x="60" y="250" width="1800" height="1" fill="#E3E5E8"/>
+<text x="80" y="310" font-size="24" fill="#282F33">Tháng 1</text>
+<text x="760" y="310" font-size="24" fill="#282F33" text-anchor="end">128</text>
+<text x="1820" y="310" font-size="24" fill="#282F33" text-anchor="end">1.240.000.000</text>
+<rect x="60" y="335" width="1800" height="1" fill="#EEF0F2"/>
+<text x="80" y="390" font-size="24" fill="#282F33">Tháng 2</text>
+<text x="760" y="390" font-size="24" fill="#282F33" text-anchor="end">142</text>
+<text x="1820" y="390" font-size="24" fill="#282F33" text-anchor="end">1.385.500.000</text>
+<rect x="60" y="415" width="1800" height="1" fill="#EEF0F2"/>
+<text x="80" y="470" font-size="24" fill="#282F33">Tháng 3</text>
+<text x="760" y="470" font-size="24" fill="#282F33" text-anchor="end">167</text>
+<text x="1820" y="470" font-size="24" fill="#282F33" text-anchor="end">1.612.300.000</text>
+<rect x="60" y="495" width="1800" height="1" fill="#EEF0F2"/>
+<text x="80" y="550" font-size="24" fill="#282F33">Tháng 4</text>
+<text x="760" y="550" font-size="24" fill="#282F33" text-anchor="end">171</text>
+<text x="1820" y="550" font-size="24" fill="#282F33" text-anchor="end">1.698.000.000</text>
+<rect x="60" y="575" width="1800" height="1" fill="#EEF0F2"/>
+<text x="80" y="630" font-size="24" fill="#282F33">Tháng 5</text>
+<text x="760" y="630" font-size="24" fill="#282F33" text-anchor="end">189</text>
+<text x="1820" y="630" font-size="24" fill="#282F33" text-anchor="end">1.874.200.000</text>
+<rect x="60" y="655" width="1800" height="1" fill="#EEF0F2"/>
+<text x="80" y="710" font-size="24" fill="#282F33">Tháng 6</text>
+<text x="760" y="710" font-size="24" fill="#282F33" text-anchor="end">204</text>
+<text x="1820" y="710" font-size="24" fill="#282F33" text-anchor="end">2.031.750.000</text>
+<rect x="60" y="735" width="1800" height="1" fill="#EEF0F2"/>
+<rect x="60" y="750" width="1800" height="70" fill="#F2F2F2"/>
+<text x="80" y="795" font-size="26" font-weight="700" fill="#21272B">Tổng</text>
+<text x="760" y="795" font-size="26" font-weight="700" fill="#21272B" text-anchor="end">1.001</text>
+<text x="1820" y="795" font-size="26" font-weight="700" fill="#21272B" text-anchor="end">9.841.750.000</text>
+</svg>

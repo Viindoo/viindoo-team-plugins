@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Lớp chữ màn mở đầu - Bán hàng và CRM</title>
+<!--
+  Liên 05/11: cảnh mở đầu hình vẽ "quê quá" -> nền là CLIP NGƯỜI THẬT (Mixkit 5601, người mệt mỏi
+  trước laptop), lớp chữ trong suốt này chồng lên bằng ffmpeg (dung_mo_dau.py).
+  Kiểu chữ theo màn mở đầu đã duyệt của cụm Dự án (mo_dau_trong.html): logo trên thẻ trắng, câu lớn
+  Montserrat có gạch chân cyan, một vạch cyan, câu phụ.
+  Luật nền mờ (Liên 30/10): chỉ tối ở DẢI CHỮ bên trái rồi buông nhanh; từ ~60-70% khung trở ra gần
+  như để nguyên ảnh để thấy rõ người.
+  ?n=1 câu lớn, ?n=2 thêm câu phụ.
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1280px;height:720px;overflow:hidden;position:relative;
+       font-family:Montserrat,system-ui,sans-serif;background:transparent}
+  .dai{position:absolute;inset:0;
+       background:linear-gradient(90deg,rgba(6,10,13,.78) 0%,rgba(6,10,13,.66) 34%,
+                                  rgba(6,10,13,.18) 56%,rgba(6,10,13,0) 68%)}
+  .logo{position:absolute;top:40px;left:64px;background:#fff;border-radius:7px;
+        padding:9px 15px;box-shadow:0 6px 22px rgba(0,0,0,.3)}
+  .logo img{height:22px;display:block}
+  .giua{position:absolute;left:64px;width:640px;top:210px;color:#fff}
+  .cau{font-size:44px;line-height:1.26;font-weight:800;letter-spacing:-.012em;color:#fff}
+  .cau b{border-bottom:4px solid #00BBCE;padding-bottom:2px}
+  .vach{width:90px;height:3px;background:#00BBCE;margin:30px 0 24px;border-radius:2px;opacity:0}
+  .chot{font-size:22px;line-height:1.5;font-weight:600;color:#d6e0e5;opacity:0}
+  .hien{opacity:1}
+</style>
+</head>
+<body>
+  <div class="dai"></div>
+  <div class="logo"><img src="mo-phong/logo-color.svg" alt="Viindoo"></div>
+  <div class="giua">
+    <div class="cau">Kho còn <b>1.200</b> cái. Đang giữ bao nhiêu tiền?</div>
+    <div class="vach" data-i="2"></div>
+    <div class="chot" data-i="2">Hàng trong kho là tiền của doanh nghiệp.</div>
+  </div>
+<script>
+  // ?lang=en: chu tieng Anh (cau phu = cau doc dau tien cua tts_en_fw.py)
+  if (new URLSearchParams(location.search).get("lang") === "en") {
+    document.documentElement.lang = "en";
+    document.querySelector(".cau").innerHTML = "<b>1,200</b> units in stock. How much money is that?";
+    document.querySelector(".chot").textContent =
+      "Customers are a company's most valuable asset.";
+  }
+  const n = parseInt(new URLSearchParams(location.search).get("n") || "2", 10);
+  document.querySelectorAll("[data-i]").forEach(e => {
+    if (parseInt(e.dataset.i, 10) <= n) e.classList.add("hien");
+  });
+</script>
+</body>
+</html>

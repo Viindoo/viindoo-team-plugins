@@ -1,0 +1,7 @@
+{
+  "name": "viindoo-video",
+  "version": "1.0.0",
+  "description": "Làm video Viindoo theo bộ nguyên tắc chung: viindoo-motion-video (video ngành / tổng thể bằng motion-graphics brand Viindoo, kèm engine GSAP + Chrome + FFmpeg), viindoo-video-cum-nghiep-vu (dây chuyền clip tổng thể cho một cụm nghiệp vụ, song ngữ Việt - Anh, từ dữ liệu demo đến đăng YouTube), viindoo-module-launch (clip + bài tin ra mắt module trên Viindoo Apps). Kèm nguyên tắc video, brand và khuôn script dùng chung.",
+  "author": { "name": "Nguyễn Thị Liên" },
+  "keywords": ["viindoo", "video", "motion-graphics", "marketing", "youtube", "tts", "ra-mat-module"]
+}

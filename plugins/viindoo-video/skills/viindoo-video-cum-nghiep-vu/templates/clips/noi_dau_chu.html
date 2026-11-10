@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Lớp chữ cảnh nỗi đau - Bán hàng và CRM</title>
+<!--
+  Liên 09/11/2026: cảnh nỗi đau kiểu hình vẽ người + 6 vòng tròn công cụ "xấu quá, trình bày khác
+  đi, bỏ hết cả ở các clip sau". Thay bằng NGƯỜI THẬT toàn khung (Pexels 3129424, lật ngang để
+  người sang phải) + lớp chữ trong suốt này, chồng bằng ffmpeg (dung_noi_dau.py).
+  Cùng kiểu chữ màn mở đầu (mo_dau_chu.html) nhưng KHÔNG logo, dải tối chỉ bên trái rồi buông nhanh.
+  ?n=1 nhãn lớn, ?n=2 thêm dòng phụ.
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1280px;height:720px;overflow:hidden;position:relative;
+       font-family:Montserrat,system-ui,sans-serif;background:transparent}
+  .dai{position:absolute;inset:0;
+       background:linear-gradient(90deg,rgba(6,10,13,.70) 0%,rgba(6,10,13,.55) 32%,
+                                  rgba(6,10,13,.12) 52%,rgba(6,10,13,0) 62%)}
+  .giua{position:absolute;left:64px;width:700px;top:250px;color:#fff}
+  .cau{font-size:44px;white-space:nowrap;line-height:1.26;font-weight:800;letter-spacing:-.012em;color:#fff}
+  .cau b{border-bottom:4px solid #00BBCE;padding-bottom:2px}
+  .vach{width:90px;height:3px;background:#00BBCE;margin:30px 0 24px;border-radius:2px;opacity:0}
+  .chot{font-size:24px;line-height:1.5;font-weight:600;color:#d6e0e5;opacity:0}
+  .hien{opacity:1}
+</style>
+</head>
+<body>
+  <div class="dai"></div>
+  <div class="giua">
+    <div class="cau">Thiếu thứ cần, <b>thừa</b> thứ không cần</div>
+    <div class="vach" data-i="2"></div>
+    <div class="chot" data-i="2">Tiền nằm im trong kho.</div>
+  </div>
+<script>
+  if (new URLSearchParams(location.search).get("lang") === "en") {
+    document.documentElement.lang = "en";
+    document.querySelector(".cau").innerHTML = "Short on what you need, <b>overstocked</b> on what you don't";
+    document.querySelector(".chot").textContent = "Money sits idle in the warehouse.";
+  }
+  const n = parseInt(new URLSearchParams(location.search).get("n") || "2", 10);
+  document.querySelectorAll("[data-i]").forEach(e => {
+    if (parseInt(e.dataset.i, 10) <= n) e.classList.add("hien");
+  });
+</script>
+</body>
+</html>

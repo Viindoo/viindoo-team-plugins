@@ -1,0 +1,23 @@
+{ "title": "Mau thu engine - du lieu minh hoa, khong phai so cua khach",
+  "width": 1920, "height": 1080, "fps": 30,
+  "scenes": [
+    { "scene": "fwtitle", "duration": 3.5,
+      "data": { "name": "VIINDOO BÁN HÀNG", "sub": "Clip mẫu thử engine" } },
+    { "scene": "fwtwo", "duration": 5,
+      "data": { "kicker": "Mục đích", "headline": "Dùng phần mềm để làm gì",
+        "pillars": [
+          { "tag": "Quản", "title": "Thấy doanh thu theo từng kỳ", "note": "Số đi thẳng từ đơn hàng" },
+          { "tag": "Xây", "title": "Ra quyết định trên số thật", "note": "Không chờ tổng hợp cuối tháng" } ] } },
+    { "scene": "fwsteps", "duration": 5,
+      "data": { "kicker": "Dòng chảy", "headline": "Từ báo giá đến báo cáo",
+        "steps": [ {"label": "Báo giá"}, {"label": "Đơn hàng"}, {"label": "Giao hàng"},
+                   {"label": "Hoá đơn"}, {"label": "Báo cáo"} ] } },
+    { "scene": "fwscreen", "duration": 6,
+      "data": { "steps": ["Báo giá", "Đơn hàng", "Giao hàng", "Hoá đơn", "Báo cáo"],
+        "active": 4, "goal": "Chứng minh: Quản",
+        "shot": "man-mau.svg", "shotSize": {"w": 1920, "h": 1080},
+        "focus": {"x": 60, "y": 750, "w": 1800, "h": 70},
+        "number": "9.841.750.000 đ", "meaning": "Doanh thu sáu tháng (số minh hoạ)" } },
+    { "scene": "fwcta", "duration": 3.5,
+      "data": { "sub": "Đặt lịch trải nghiệm", "button": "Đặt lịch demo" } }
+  ] }
