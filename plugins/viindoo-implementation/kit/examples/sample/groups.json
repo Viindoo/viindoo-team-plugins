@@ -1,0 +1,338 @@
+{
+ "server": "19.0",
+ "note": "VÍ DỤ - nhóm quyền chuẩn Viindoo 19 (chỉ các mục ví dụ dùng). Khách thật: scan_live_system.py --groups-only.",
+ "groups": [
+  {
+   "id": 1,
+   "name": "Người dùng Nội bộ",
+   "section": "-",
+   "implied_ids": [
+    18,
+    22,
+    123,
+    122,
+    64,
+    17,
+    49,
+    15,
+    48,
+    56,
+    52,
+    61,
+    69,
+    12,
+    7,
+    6
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Quyền truy cập",
+   "section": "-",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Bỏ qua tính năng Dọn dẹp Trường HTML",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 4,
+   "name": "Vai trò/Quản trị viên",
+   "section": "-",
+   "implied_ids": [
+    142,
+    35,
+    141,
+    9,
+    8,
+    3,
+    14,
+    2,
+    12,
+    7
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Đa tiền tệ",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 7,
+   "name": "Tính năng kỹ thuật",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 8,
+   "name": "Được phép",
+   "section": "Xuất",
+   "implied_ids": []
+  },
+  {
+   "id": 9,
+   "name": "Tạo",
+   "section": "Liên hệ",
+   "implied_ids": []
+  },
+  {
+   "id": 12,
+   "name": "Trình chỉnh sửa mẫu thư",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 14,
+   "name": "Chuyển luồng tin nhắn",
+   "section": "-",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 15,
+   "name": "Quản lý nhiều đơn vị tính",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 17,
+   "name": "Kế toán quản trị",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 18,
+   "name": "Bảng giá cơ bản",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 22,
+   "name": "Chiết khấu theo dòng",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 23,
+   "name": "Người dùng: Chỉ tài liệu của chính mình",
+   "section": "Bán hàng",
+   "implied_ids": [
+    131,
+    1
+   ]
+  },
+  {
+   "id": 24,
+   "name": "Người dùng: Tất cả tài liệu",
+   "section": "Bán hàng",
+   "implied_ids": [
+    23
+   ]
+  },
+  {
+   "id": 25,
+   "name": "Quản trị viên",
+   "section": "Bán hàng",
+   "implied_ids": [
+    24,
+    141,
+    12
+   ]
+  },
+  {
+   "id": 27,
+   "name": "Kiểm toán viên - Chỉ đọc",
+   "section": "Kế toán",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 28,
+   "name": "Hóa đơn",
+   "section": "Kế toán",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 29,
+   "name": "Kế toán chứng từ",
+   "section": "Kế toán",
+   "implied_ids": [
+    28,
+    143,
+    27
+   ]
+  },
+  {
+   "id": 30,
+   "name": "Quản trị viên",
+   "section": "Kế toán",
+   "implied_ids": [
+    29,
+    116
+   ]
+  },
+  {
+   "id": 35,
+   "name": "Xác nhận tài khoản ngân hàng",
+   "section": "Ngân hàng",
+   "implied_ids": []
+  },
+  {
+   "id": 44,
+   "name": "Người dùng",
+   "section": "Mua hàng",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 45,
+   "name": "Quản trị viên",
+   "section": "Mua hàng",
+   "implied_ids": [
+    44
+   ]
+  },
+  {
+   "id": 48,
+   "name": "Quản lý nhiều địa điểm tồn kho",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 49,
+   "name": "Quản lý nhiều kho",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 50,
+   "name": "Người dùng",
+   "section": "Tồn kho",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 51,
+   "name": "Quản trị viên",
+   "section": "Tồn kho",
+   "implied_ids": [
+    50
+   ]
+  },
+  {
+   "id": 52,
+   "name": "Quản lý số lô/sê-ri",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 56,
+   "name": "Quản lý quy trình tồn kho kéo và đẩy",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 61,
+   "name": "Sử dụng báo cáo nhập kho",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 64,
+   "name": "Kế toán kho tự động",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 69,
+   "name": "Sử dụng nhiệm vụ định kỳ",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 83,
+   "name": "Duyệt cho nhóm",
+   "section": "Phê duyệt",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 84,
+   "name": "Cán bộ",
+   "section": "Phê duyệt",
+   "implied_ids": [
+    83
+   ]
+  },
+  {
+   "id": 85,
+   "name": "Quản trị viên",
+   "section": "Phê duyệt",
+   "implied_ids": [
+    84
+   ]
+  },
+  {
+   "id": 116,
+   "name": "Cho phép định nghĩa năm tài chính nhiều hoặc ít hơn 1 năm lịch.",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 122,
+   "name": "Hiển thị menu tiềm năng",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 123,
+   "name": "Hiển thị menu doanh thu định kỳ",
+   "section": "-",
+   "implied_ids": []
+  },
+  {
+   "id": 131,
+   "name": "Người dùng: Shipment của mình",
+   "section": "Quản lý shipment",
+   "implied_ids": [
+    1
+   ]
+  },
+  {
+   "id": 141,
+   "name": "Quản trị viên câu trả lời soạn sẵn",
+   "section": "Câu trả lời soạn sẵn",
+   "implied_ids": []
+  },
+  {
+   "id": 142,
+   "name": "Tạo",
+   "section": "Sản phẩm",
+   "implied_ids": []
+  },
+  {
+   "id": 143,
+   "name": "Hóa đơn & Ngân hàng",
+   "section": "Kế toán",
+   "implied_ids": [
+    28
+   ]
+  }
+ ],
+ "roles": {
+  "Người dùng": 1,
+  "Quản trị viên": 4
+ }
+}

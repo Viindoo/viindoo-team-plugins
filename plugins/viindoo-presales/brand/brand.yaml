@@ -93,6 +93,12 @@ bpmn_palette:
       fill: "#f5f5f5"
       stroke: "#666666"
       desc: "Activity bị loại bỏ trong To-Be (vẽ mờ + nét đứt)"
+    call_activity:
+      fill: "#ffffff"
+      stroke: "#666666"
+      stroke_width: 3
+      marker: "[+]"
+      desc: "Gọi quy trình con (call activity): ô bo góc viền đậm, dấu [+] giữa cạnh dưới, chữ 'QTxx - tên ngắn'; không tô màu, không dùng tím #7F4282 (dành cho nhãn điều kiện)"
     data_object:
       fill: "#e1d5e7"
       stroke: "#9673a6"

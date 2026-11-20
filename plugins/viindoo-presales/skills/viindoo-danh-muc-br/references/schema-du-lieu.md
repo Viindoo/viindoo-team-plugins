@@ -56,7 +56,7 @@ Ví dụ:
 
 Khóa hợp lệ: `ks` khảo sát, `tk` phân tích thiết kế, `lt` lập trình, `qa` kiểm thử, `dt` đào tạo và nghiệm thu, `ch` cấu hình triển khai, `tl` tài liệu và video, `gs` giám sát hậu triển khai. **Bảo hành tự tính** bằng 15% giờ lập trình, không khai tay.
 
-> **Giờ điền vào đây là giờ ĐÃ CHỐT theo quy tắc tính giá hiện hành.** Plugin không giữ công thức quy đổi, không giữ hệ số AI, không giữ đơn giá - hỏi Liên hoặc tra quy tắc hiện hành trước khi bóc giờ, và đừng mang hệ số của dự án cũ sang dự án mới.
+> **Giờ điền vào đây là giờ ĐÃ CHỐT theo quy tắc tính giá hiện hành.** Đơn giá theo cấp nằm ở sheet `Bảng giá theo manday` của mẫu, dùng cho triển khai trọn gói hoặc tùy biến tính theo công; gói Express chỉ đếm giờ. Công thức quy đổi giờ, hệ số AI: hỏi Liên hoặc tra quy tắc hiện hành trước khi bóc giờ, và đừng mang hệ số của dự án cũ sang dự án mới.
 
 Đơn giá từng cấp nằm ở sheet `Bảng giá theo manday` trong chính workbook; chi phí tính bằng tổng của từng cấp nhân đơn giá cấp đó, không dùng đơn giá bình quân.
 
