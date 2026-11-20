@@ -1,6 +1,6 @@
 # Báo giá - cách trình bày
 
-> **Plugin này không giữ công thức giá và không giữ đơn giá.** Quy tắc tính giá thay đổi theo thời điểm và theo từng khách; hỏi Liên hoặc đọc bảng giá hiện hành trước mỗi lần báo giá. Dưới đây chỉ là **cách trình bày** - phần ổn định giữa các dự án.
+> **Cách tính chi phí:** triển khai trọn gói hoặc tùy biến tính theo công dùng bảng đơn giá theo cấp trong mẫu danh mục yêu cầu (`kit/mau/danh-muc-br.xlsx`); gói Express chỉ đếm giờ vào gói. Giá gói, thuê bao, ưu đãi thay đổi theo thời điểm và theo từng khách; hỏi Liên hoặc đọc bảng giá hiện hành trước mỗi lần báo giá. Dưới đây chỉ là **cách trình bày** - phần ổn định giữa các dự án.
 >
 > Số giờ và giá của từng hạng mục lấy từ danh mục BR đã chốt ở bước 3, đọc thẳng bằng `openpyxl`, không gõ lại tay.
 

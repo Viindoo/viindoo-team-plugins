@@ -1,0 +1,17 @@
+{
+  "name": "viindoo-implementation",
+  "version": "1.0.0",
+  "description": "Viindoo Implementation - triển khai dự án Viindoo sau khi ký hợp đồng. Đánh giá hiện trạng hai nhánh (khách mới: workbook Excel thu thập dữ liệu; khách đang dùng hệ thống: rà soát chỉ đọc), báo cáo hiện trạng và kế hoạch triển khai, bộ quy trình ứng dụng (QTUD: HTML, PDF, Word, sơ đồ BPMN tự kiểm hình học, ma trận phân quyền tự kiểm), danh sách việc thiết lập nội bộ, bảng nhiệm vụ dự án viindoo.com và lịch đào tạo. Skill viindoo-trien-khai-du-an, viindoo-danh-gia-hien-trang, viindoo-quy-trinh-ung-dung, viindoo-viec-thiet-lap, viindoo-ke-hoach-du-an; lệnh /trien-khai-du-an. Cần plugin viindoo-presales (brand, khung tài liệu).",
+  "author": {
+    "name": "Nguyễn Thị Liên"
+  },
+  "keywords": [
+    "viindoo",
+    "implementation",
+    "trien-khai",
+    "qtud",
+    "danh-gia-hien-trang",
+    "ke-hoach-trien-khai",
+    "dao-tao"
+  ]
+}

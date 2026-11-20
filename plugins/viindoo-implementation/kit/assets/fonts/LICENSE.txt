@@ -1,0 +1,2 @@
+Roboto (Regular, Medium, Bold) - Google Fonts, Apache License 2.0: https://www.apache.org/licenses/LICENSE-2.0
+Dùng để đo bề rộng chữ cho bộ kiểm hình học sơ đồ (bpmn_geometry_check.py) và nhúng vào ảnh sơ đồ bản Word.

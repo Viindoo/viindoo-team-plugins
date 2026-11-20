@@ -2,7 +2,7 @@
 
 Năm skill của bộ hồ sơ khách hàng đều dựng tài liệu từ kit này, nên mọi tài liệu gửi đi cùng một bộ màu, font, logo và cùng một cách hành xử của ô ý kiến.
 
-**Kit không giữ công thức giá, hệ số hay đơn giá.** Quy tắc tính giá đổi theo thời điểm và theo từng khách - hỏi Liên hoặc tra bảng giá hiện hành, đừng mang hệ số của dự án cũ sang dự án mới.
+**Cách tính chi phí.** Triển khai trọn gói hoặc tùy biến tính theo công: chi phí dùng bảng đơn giá theo cấp (Junior / Senior / Expert) có sẵn trong mẫu danh mục yêu cầu (`kit/mau/danh-muc-br.xlsx`, sheet Bảng giá theo manday). Gói Express: chỉ đếm giờ vào gói, không tính tiền theo đơn giá cấp. Giá gói, thuê bao, ưu đãi và các hệ số khác đổi theo thời điểm và theo từng khách - hỏi Liên hoặc tra bảng giá hiện hành, đừng mang hệ số của dự án cũ sang dự án mới.
 
 ## Nạp kit
 
